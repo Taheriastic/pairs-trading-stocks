@@ -59,6 +59,7 @@ for (const file of ['fpa-report.pdf', 'fpa-report.pbix', 'report-1.png', 'report
   assert.equal(response.status, 200, `Missing ${file}`);
   const body = Buffer.from(await response.arrayBuffer());
   assert.ok(body.length > 1000, `Empty artifact ${file}`);
+  assert.equal(createHash('sha256').update(body).digest('hex'), manifest.files[`web/public/powerbi/${file}`], `Published ${file} differs from the verified export`);
   if (file.endsWith('.pdf')) assert.equal(body.subarray(0, 4).toString(), '%PDF');
   if (file.endsWith('.pbix')) assert.equal(body.subarray(0, 2).toString(), 'PK');
 }

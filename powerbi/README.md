@@ -33,12 +33,14 @@ In Power BI, baseline and +5pp growth / +1pp margin scenarios were checked for a
 
 The generation script independently checks all 100 variance bridges and Microsoft's fixed-revenue sensitivity. These checks complement the report review; they do not establish that a new report version has been published.
 
-Public embedding was attempted on 18 October 2026. The tenant returned: **“Contact your admin to enable embed code creation.”** Do not describe the app as containing a publicly embedded live Power BI report. The intended public fallback is an authentic exported report preview/download. A workspace link requires authorized sign-in and is not a public sharing link.
+Public embedding was attempted on 18 October 2026. The tenant returned: **“Contact your admin to enable embed code creation.”** Do not describe the app as containing a publicly embedded live Power BI report. The public fallback is an authentic exported report preview/download. A workspace link requires authorized sign-in and is not a public sharing link.
 
 The app includes the original PDF and PBIX exported from the service, plus three PNG previews rendered directly from that PDF. The PBIX contains imported data and all three report pages; no live credentials are required. Browser report behavior was verified in the service; opening the PBIX in Windows Desktop was not tested on this Mac. The public preview is static, and the app's existing operating-outlook controls remain the way to change assumptions in the browser.
 
 `manifest.json` pins the financial snapshot and exported artifacts with SHA-256 hashes. Regenerating the Power Query sources does not regenerate the exported report. Re-author, verify, export, and render the report if its source snapshot changes; update the manifest only after that review.
 
 Run `node scripts/check_power_bi.mjs http://localhost:3011` against a running production build. It checks the pinned artifacts, reconciles all eight observed Power BI results with the app API and the formulas in downloaded Excel workbooks, and verifies that PDF/PBIX/PNG files are served. Excel formulas are evaluated independently for this check; this does not claim a native Excel Desktop recalculation test.
+
+Release verification on 18 October 2026 passed against https://pairs-trading-stocks.vercel.app/: all eight API/Excel scenarios reconciled; PDF, PBIX, and three preview files matched their verified SHA-256 hashes without authentication. All three preview tabs were checked at desktop width and at 390px mobile width with no horizontal overflow. Both historical company-pair workspaces were also checked after deployment. Lint, TypeScript, production build, five daily-engine tests, and eight Python tests passed.
 
 Report ID: `ae6adcf8-7c5f-4710-abd8-f402fb88a650`. Workspace report: https://app.powerbi.com/groups/dbcace42-580f-413c-ac2c-b7c8036ebd6e/reports/ae6adcf8-7c5f-4710-abd8-f402fb88a650/
