@@ -1,7 +1,7 @@
 import ExcelJS from "exceljs";
 import { NextRequest, NextResponse } from "next/server";
 import { localAnalysis, validPair } from "@/lib/server";
-import { replayWhatIf } from "@/lib/whatIf";
+import { exitLabel, replayWhatIf } from "@/lib/whatIf";
 import { allowRequest, clientKey } from "@/lib/rateLimit";
 
 export const runtime = "nodejs";
@@ -73,7 +73,7 @@ export async function GET(request: NextRequest) {
     [11, `${data.symbols[0]} entry adjusted price`, trade.entry_y],
     [12, `${data.symbols[1]} entry adjusted price`, trade.entry_x],
     [13, "Exit date", trade.exit_date],
-    [14, "Exit reason", trade.reason],
+    [14, "Exit reason", exitLabel(trade.reason)],
     [15, `${data.symbols[0]} exit adjusted price`, trade.exit_y],
     [16, `${data.symbols[1]} exit adjusted price`, trade.exit_x],
     [
@@ -148,7 +148,7 @@ export async function GET(request: NextRequest) {
   for (const row of [4, 10, 13, 24]) sheet.getRow(row).font = { bold: true };
   sheet.getCell("A28").value = "Interpretation";
   sheet.getCell("B28").value =
-    "The what-if result uses later historical prices. It was not known on the decision date; no predictive edge is implied.";
+    "The what-if result uses later historical prices. Spread target/stop are z-score thresholds, not fixed P/L levels. No predictive edge is implied.";
   sheet.getCell("A29").value = "Price provenance";
   sheet.getCell("B29").value =
     "See DATA_SOURCES.md in the public repository. Retrospectively adjusted research values differ from executable quotes.";

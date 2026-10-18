@@ -27,6 +27,8 @@ The chart shows aligned adjusted research prices for both companies from the fir
 
 For a visitor-selected historical day, the what-if drill allows either pair direction even if the strategy's eligibility or entry rules did not support a trade. It allocates half the selected capital to each leg at the next available adjusted close. On each subsequent close it checks the same target, stop, and 20-session rules, then simulates an exit at the next close. It applies 10 basis points per leg per side to entry and exit. A trade still open at the sample end exits there. The workbook carries the same values and formulas for signed shares, gross P/L, costs, net P/L, and net return. This exercise is an ex-post scenario and **is never added to the tested strategy curve or trade count**. Outcomes near the end of the sample are truncated by the fixed cutoff.
 
+The target and stop are thresholds on the evolving standardized spread, not fixed profit or loss thresholds. A spread stop can therefore have a positive dollar P/L, particularly in a visitor-selected what-if that did not qualify under the strategy's relationship test.
+
 ## Limits
 
 - Repeated daily cointegration tests can produce false positives. A low p-value is not a guarantee of future mean reversion.

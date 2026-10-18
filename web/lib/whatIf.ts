@@ -1,5 +1,12 @@
 import type { Analysis, Trade } from "./types";
 
+export function exitLabel(reason: string): string {
+  if (reason === "stop") return "spread stop";
+  if (reason === "target") return "spread target";
+  if (reason === "time") return "time limit";
+  return reason;
+}
+
 export function replayWhatIf(
   analysis: Analysis,
   signalDate: string,

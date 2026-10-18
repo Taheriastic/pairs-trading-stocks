@@ -1,7 +1,7 @@
 import Link from "next/link";
 import PrintButton from "@/components/PrintButton";
 import { localAnalysis, validPair } from "@/lib/server";
-import { replayWhatIf } from "@/lib/whatIf";
+import { exitLabel, replayWhatIf } from "@/lib/whatIf";
 
 const usd = (value: number) =>
   new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(
@@ -115,7 +115,7 @@ export default async function TradeBrief({
             <div>
               Net historical result<strong>{usd(trade.pnl)}</strong>
               <small>
-                {trade.return_pct.toFixed(2)}% · {trade.reason} ·{" "}
+                {trade.return_pct.toFixed(2)}% · {exitLabel(trade.reason)} ·{" "}
                 {trade.holding_days} sessions
               </small>
             </div>
@@ -127,10 +127,12 @@ export default async function TradeBrief({
             The result follows the same spread target, stop, and{" "}
             {analysis.model.max_hold_days}-session limit used in the research
             model, with {analysis.model.cost_bps_per_leg_per_side} basis points
-            per leg per side. It is an ex-post hypothetical outcome, never part
-            of the strategy trade count or performance curve. A relative price
-            gap is not proof either stock was fundamentally mispriced. The
-            selected outcome was unknowable on {date}.
+            per leg per side. Target and stop describe the standardized spread,
+            not a fixed dollar gain or loss; a spread stop can still have a
+            positive P/L. It is an ex-post hypothetical outcome, never part of
+            the strategy trade count or performance curve. A relative price gap
+            is not proof either stock was fundamentally mispriced. The selected
+            outcome was unknowable on {date}.
           </p>
           <p>
             <Link

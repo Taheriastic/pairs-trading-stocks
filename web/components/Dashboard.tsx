@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useState } from "react";
 import LineChart from "./LineChart";
 import PriceChart from "./PriceChart";
-import { replayWhatIf } from "@/lib/whatIf";
+import { exitLabel, replayWhatIf } from "@/lib/whatIf";
 import type {
   Analysis,
   Financials,
@@ -611,7 +611,7 @@ export default function Dashboard({ financials }: { financials: Financials }) {
                         {signed(matchingTrade.return_pct)}
                       </strong>{" "}
                       over {matchingTrade.holding_days} trading days ·{" "}
-                      {matchingTrade.reason} exit.
+                      {exitLabel(matchingTrade.reason)} exit.
                     </div>
                   )}
                   {signal.action === "entry queued" && (
@@ -647,6 +647,8 @@ export default function Dashboard({ financials }: { financials: Financials }) {
               <p>
                 Cointegration is retested on the training window. A low p-value
                 is evidence under a model, not proof of future convergence.
+                Target and stop refer to the spread z-score, not a fixed P/L
+                percentage; a spread stop can still show a dollar gain.
               </p>
             </div>
           </div>
@@ -726,7 +728,7 @@ export default function Dashboard({ financials }: { financials: Financials }) {
                   </div>
                   <div>
                     <span>
-                      Exit · {whatIf.exit_date} · {whatIf.reason}
+                      Exit · {whatIf.exit_date} · {exitLabel(whatIf.reason)}
                     </span>
                     <strong>
                       {analysis.symbols[0]} {price(whatIf.exit_y)} <i>/</i>{" "}
@@ -872,7 +874,7 @@ export default function Dashboard({ financials }: { financials: Financials }) {
                                 ? `Buy ${analysis.symbols[0]} / short ${analysis.symbols[1]}`
                                 : `Short ${analysis.symbols[0]} / buy ${analysis.symbols[1]}`}
                             </td>
-                            <td>{t.reason}</td>
+                            <td>{exitLabel(t.reason)}</td>
                             <td
                               className={t.pnl >= 0 ? "positive" : "negative"}
                             >
