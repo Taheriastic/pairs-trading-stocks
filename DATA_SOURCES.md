@@ -15,3 +15,7 @@ The other symbols use `Adj Close` for analysis and `Close` only for source inspe
 Financial values are selected from annual-duration, consolidated US-GAAP facts in 10-Ks filed by the cutoff. The earliest eligible filing for each annual period is used, avoiding later restatements where the SEC API has multiple entries. Latest matched annual revenue and operating income are shown, with the previous annual revenue used for growth. The exact accession and source URL for each company are in `data/financials.json`.
 
 `data/manifest.json` records row counts, license metadata, archive SHA-256 checksums, and sources. `scripts/prepare_data.py` refuses changed price archives. Updating the dataset requires a new review, checksum, date label, calculations, and tests.
+
+## Separate 20-year research archive
+
+The [strategy study](STRATEGY_STUDY.md) audited a newer Kaggle archive containing KO, PEP, MSFT, and ORCL through 2026-10-16. Its publisher labels the archive CC0, but the metadata does not document upstream price rights. Its one `close` field appears retrospectively adjusted, without raw closes or split/dividend event rows. The archive is used only to generate local research and aggregate results in `data/strategy_study.json`; its price rows and trade-specific levels are not shipped with the web app. The interactive simulator continues to use the separately pinned 2024 snapshot described above.

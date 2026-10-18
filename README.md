@@ -1,8 +1,8 @@
 # Pairs Trading Stocks
 
-Live app: [pairs-trading-stocks.vercel.app](https://pairs-trading-stocks.vercel.app/). The public Vercel deployment uses a fixed, sourced historical snapshot through 2024-12-20; no live quotes are supplied.
+Live app: [pairs-trading-stocks.vercel.app](https://pairs-trading-stocks.vercel.app/). Its interactive trade simulator uses a fixed historical price snapshot through 2024-12-20; no live quotes are supplied. A separate [20-year strategy study](STRATEGY_STUDY.md) uses research prices through 2026-10-16 and reports aggregate comparisons. Its newer raw price rows are not redistributed in the app.
 
-A filing-backed FP&A scenario planner and historical pairs research app for **Coca-Cola / PepsiCo** and **Microsoft / Oracle**. The dashboard is designed as a finance case study: it makes assumptions, sources, losses, and inactive periods visible. It is not a current trading signal service.
+A filing-backed FP&A scenario planner and historical pairs research app for **Coca-Cola / PepsiCo** and **Microsoft / Oracle**. The dashboard is designed as a finance case study: it makes assumptions, sources, losses, and inactive periods visible. The longer-horizon study found **no validated winner** for either pair among its tested methods. It is not a current trading signal service.
 
 ## What it does
 

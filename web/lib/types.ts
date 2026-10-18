@@ -96,3 +96,49 @@ export type Scenario = {
   filing_url: string;
   period_end: string;
 };
+
+export type StudyMetrics = {
+  return_pct: number;
+  cagr_pct: number;
+  drawdown_pct: number;
+  trades: number;
+  losses: number;
+  score: number | null;
+};
+export type StudyCandidate = {
+  config: {
+    family: string;
+    lookback: number;
+    entry_percentile: number;
+    exit_percentile: number;
+    max_hold: number;
+    min_correlation: number | null;
+  };
+  development: StudyMetrics;
+  validation: StudyMetrics;
+  holdout: StudyMetrics;
+  full: StudyMetrics;
+};
+export type StrategyStudyData = {
+  audit: { common_rows: number; start_date: string; end_date: string };
+  splits: {
+    development_end: string;
+    validation_end: string;
+    holdout_start: string;
+  };
+  pairs: Record<
+    string,
+    {
+      tested_candidates: number;
+      developed_candidates: number;
+      qualified_candidates: number;
+      selected: StudyCandidate | null;
+      hindsight: StudyCandidate;
+      family_hindsight: Record<string, StudyCandidate>;
+      most_active: StudyCandidate;
+      cointegration_baseline: Record<string, StudyMetrics>;
+      equal_weight_benchmark: Record<string, StudyMetrics>;
+      holdout_pass: boolean;
+    }
+  >;
+};

@@ -224,6 +224,7 @@ h3 {
   margin-bottom: 12px;
 }
 .pair-section,
+.study-section,
 .scenario-section,
 .historical-section,
 .performance-section {
@@ -1188,11 +1189,119 @@ body {
   padding-top: 14px;
 }
 .pair-section,
+.study-section,
 .prices-section,
 .scenario-section,
 .historical-section,
 .performance-section {
   padding-top: 52px;
+}
+/* The longer-horizon research uses aggregate results only. */
+.study-verdict {
+  background: #17392f;
+  color: #fff;
+  padding: 28px 32px;
+  border-radius: 4px;
+  margin: 25px 0 14px;
+}
+.study-verdict span,
+.study-note span {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #77c8a9;
+}
+.study-verdict strong {
+  display: block;
+  font:
+    800 30px Manrope,
+    sans-serif;
+  letter-spacing: -0.045em;
+  margin: 9px 0;
+}
+.study-verdict p {
+  color: #d3e7dd;
+  max-width: 760px;
+  line-height: 1.55;
+  margin: 0;
+}
+.study-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.85fr) minmax(260px, 1fr);
+  gap: 14px;
+}
+.study-grid .panel {
+  margin: 0;
+  padding: 26px;
+  min-width: 0;
+}
+.study-table h3,
+.study-explain h3 {
+  margin-bottom: 8px;
+}
+.study-table > p,
+.study-source,
+.study-caveat {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+.study-table th small {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 400;
+  margin-top: 4px;
+}
+.study-table table {
+  min-width: 570px;
+}
+.study-table td {
+  white-space: nowrap;
+}
+.study-scroll-hint {
+  display: none;
+}
+.study-caveat {
+  display: block;
+  margin-top: 15px;
+}
+.study-note {
+  border-top: 1px solid var(--line);
+  padding: 17px 0 0;
+  margin-top: 17px;
+}
+.study-note span {
+  color: #356e5e;
+}
+.study-note p {
+  color: #435955;
+  line-height: 1.55;
+  margin: 8px 0 0;
+}
+.study-source {
+  margin: 16px 0 0;
+  max-width: 1020px;
+}
+@media (max-width: 900px) {
+  .study-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .study-scroll-hint {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+    margin: 0 0 10px;
+  }
+  .study-verdict {
+    padding: 22px;
+  }
+  .study-grid .panel {
+    padding: 19px;
+  }
 }
 .pair-button,
 .panel,

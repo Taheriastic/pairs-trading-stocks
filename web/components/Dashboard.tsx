@@ -2,12 +2,14 @@
 import { useEffect, useMemo, useState } from "react";
 import LineChart from "./LineChart";
 import PriceChart from "./PriceChart";
+import StrategyStudy from "./StrategyStudy";
 import { exitLabel, replayWhatIf } from "@/lib/whatIf";
 import type {
   Analysis,
   Financials,
   Scenario,
   Signal,
+  StrategyStudyData,
   Trade,
 } from "@/lib/types";
 
@@ -50,7 +52,13 @@ function Stat({
   );
 }
 
-export default function Dashboard({ financials }: { financials: Financials }) {
+export default function Dashboard({
+  financials,
+  study,
+}: {
+  financials: Financials;
+  study: StrategyStudyData;
+}) {
   const [pair, setPair] = useState("KO-PEP");
   const [company, setCompany] = useState("KO");
   const [analysis, setAnalysis] = useState<Analysis | null>(null);
@@ -229,7 +237,7 @@ export default function Dashboard({ financials }: { financials: Financials }) {
         </div>
         <div className="header-right">
           <span className="snapshot-pill">
-            Research data through 20 Dec 2024
+            Trade simulator through 20 Dec 2024
           </span>
           <a href="#guide">How to use this</a>
         </div>
@@ -263,14 +271,14 @@ export default function Dashboard({ financials }: { financials: Financials }) {
               </span>
               <em>Open signal lab ↗</em>
             </a>
-            <a href="#results">
+            <a href="#study">
               <b>03</b>
-              <strong>Follow the outcome</strong>
+              <strong>Compare tested methods</strong>
               <span>
-                Check the next-close entry, exit, costs, and loss as well as the
-                periods with no trades.
+                Read the 20-year study, including more active rules that lost
+                money after costs.
               </span>
-              <em>Review results ↗</em>
+              <em>Review the study ↗</em>
             </a>
             <a href="#planner">
               <b>04</b>
@@ -306,9 +314,9 @@ export default function Dashboard({ financials }: { financials: Financials }) {
           <div className="hero-aside">
             <span>READ THIS FIRST</span>
             <p>
-              A trade ending in 2022 does not mean the data ended there. The
-              model kept checking through December 2024 and found no later
-              qualifying entry for Microsoft and Oracle.
+              The newer 20-year research found no validated winner for either
+              pair. The interactive trade drill still uses its separately
+              licensed snapshot through December 2024.
             </p>
             <span className="aside-line" />
             <small>Historical research, not a live buy signal.</small>
@@ -342,6 +350,8 @@ export default function Dashboard({ financials }: { financials: Financials }) {
             ))}
           </div>
         </section>
+
+        <StrategyStudy pair={pair} study={study} />
 
         <section id="prices" className="prices-section">
           <div className="section-top">

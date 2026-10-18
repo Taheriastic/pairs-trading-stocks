@@ -1,5 +1,7 @@
 # Methodology and limitations
 
+The [20-year method comparison](STRATEGY_STUDY.md) is a separate study from the fixed 2024 interactive simulator described below. It tested 96 predefined percentile-based configurations per pair, plus this existing cointegration baseline. Every candidate lost money in its development window after modeled costs, so no new rule was promoted. The app may show aggregate study findings without treating the 2026 research archive as an executable quote source.
+
 ## FP&A
 
 For each company, use the latest eligible annual SEC filing as the reported baseline. Let reported revenue be `R0`, prior-year revenue `R−1`, reported operating income `O0`, historical growth `g0 = R0/R−1 − 1`, and historical operating margin `m0 = O0/R0`.

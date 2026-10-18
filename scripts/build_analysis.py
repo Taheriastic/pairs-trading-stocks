@@ -18,3 +18,7 @@ for pair in PAIRS:
 for name in ('financials.json', 'manifest.json'):
     shutil.copyfile(ROOT / 'data' / name, ROOT / 'web/public/data' / name)
     shutil.copyfile(ROOT / 'data' / name, ROOT / 'azure/data' / name)
+
+# The long-horizon study is aggregate-only; its underlying candidate archive is
+# intentionally excluded from the public app until data display rights clear.
+shutil.copyfile(ROOT / 'data/strategy_study.json', ROOT / 'web/public/data/strategy_study.json')
