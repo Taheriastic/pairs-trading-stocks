@@ -1,5 +1,14 @@
-// Best-effort process-local budget guard. Vercel instances do not share this map.
+import type { NextRequest } from "next/server";
+
+// Best-effort process-local budget guard. Server instances do not share this map.
 const windows = new Map<string, { count: number; expires: number }>();
+export function clientKey(request: NextRequest): string {
+  return (
+    request.headers.get("x-vercel-forwarded-for")?.split(",")[0]?.trim() ||
+    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    "local"
+  );
+}
 export function allowRequest(
   key: string,
   limit = 30,

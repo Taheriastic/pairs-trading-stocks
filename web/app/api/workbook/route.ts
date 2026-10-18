@@ -1,12 +1,10 @@
 import ExcelJS from "exceljs";
 import { NextRequest, NextResponse } from "next/server";
 import { financials, scenarioFor } from "@/lib/server";
-import { allowRequest } from "@/lib/rateLimit";
+import { allowRequest, clientKey } from "@/lib/rateLimit";
 export const runtime = "nodejs";
 export async function GET(request: NextRequest) {
-  const client =
-    request.headers.get("x-vercel-forwarded-for")?.split(",")[0]?.trim() ||
-    "local";
+  const client = clientKey(request);
   if (!allowRequest(`workbook:${client}`, 10))
     return NextResponse.json(
       { error: "Too many workbook requests" },

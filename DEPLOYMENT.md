@@ -6,6 +6,12 @@ The site is deployed at [pairs-trading-stocks.vercel.app](https://pairs-trading-
 
 The site currently uses the dated local snapshot and requires no external credentials. Verify `/`, both pairs, `/brief`, and `/api/workbook` from the actual deployment URL. The footer must read *Local dated snapshot · Azure service not connected* until Azure is live. When connecting the GitHub repository later, set **Root Directory** to `web` and Framework Preset to Next.js.
 
+## Azure Static Web Apps Free trial
+
+This is a separate hosting trial; the Vercel project above stays live. In an active Azure subscription, create a **Static Web App** on the **Free** plan from the private `Taheriastic/pairs-trading-stocks` repository's `codex/finance-decision-lab` branch. Choose the Next.js build preset, set the app location to `web`, and leave API and output locations empty. The Next.js route handlers serve `/api/analysis`, `/api/scenario`, and `/api/workbook` from Azure's managed hybrid backend; this trial does not deploy the separate Python Function App or set `AZURE_FUNCTION_URL` / `AZURE_FUNCTION_KEY`. The dated snapshot badge must remain visible.
+
+Hybrid Next.js support is in preview, so verify the generated GitHub Actions deployment and the actual Azure URL before describing the trial as live. Test both pairs, a changed scenario, `/brief`, and the downloaded workbook formulas. If the build package exceeds the Free plan's 250 MB single-environment limit, use Next.js standalone output tracing and repeat those tests. Keep the Azure URL and observed result here after deployment. [Azure hybrid Next.js guide](https://learn.microsoft.com/en-us/azure/static-web-apps/deploy-nextjs-hybrid) · [Free plan limits](https://learn.microsoft.com/en-us/azure/static-web-apps/quotas)
+
 ## Azure Functions
 
 1. Confirm eligibility and available credit for **Azure for Students** in the user's own Microsoft account. Create a spending limit/budget alert and confirm region and plan costs before enabling resources. Azure Functions' free grant does not mean all supporting resources are free; storage can incur charges.

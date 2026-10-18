@@ -1,12 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { azureRequest, financials, scenarioFor } from "@/lib/server";
 import type { Scenario } from "@/lib/types";
-import { allowRequest } from "@/lib/rateLimit";
+import { allowRequest, clientKey } from "@/lib/rateLimit";
 export const runtime = "nodejs";
 export async function POST(request: NextRequest) {
-  const client =
-    request.headers.get("x-vercel-forwarded-for")?.split(",")[0]?.trim() ||
-    "local";
+  const client = clientKey(request);
   if (!allowRequest(client))
     return NextResponse.json(
       { error: "Too many scenario requests" },
