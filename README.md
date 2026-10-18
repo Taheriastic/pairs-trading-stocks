@@ -1,4 +1,6 @@
-# Finance Decision Lab
+# Pairs Trading Stocks
+
+Live app: [pairs-trading-stocks.vercel.app](https://pairs-trading-stocks.vercel.app/). The public Vercel deployment currently uses the dated snapshot while Azure account setup is pending.
 
 A filing-backed FP&A scenario planner and historical pairs research app for **Coca-Cola / PepsiCo** and **Microsoft / Oracle**. The dashboard is designed as a finance case study: it makes assumptions, sources, losses, and inactive periods visible. It is not a current trading signal service.
 

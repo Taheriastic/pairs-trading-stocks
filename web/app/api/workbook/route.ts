@@ -26,7 +26,7 @@ export async function GET(request: NextRequest) {
     scenarioFor(fin, symbol, growth, margin);
     const book = new ExcelJS.Workbook();
     book.calcProperties.fullCalcOnLoad = true;
-    book.creator = "Finance Decision Lab";
+    book.creator = "Pairs Trading Stocks";
     book.subject = "Historical filing-based FP&A scenario";
     const sheet = book.addWorksheet("Scenario");
     sheet.columns = [{ width: 34 }, { width: 25 }, { width: 46 }];

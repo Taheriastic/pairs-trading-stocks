@@ -183,7 +183,7 @@ export default function Dashboard({ financials }: { financials: Financials }) {
             F<span>·</span>D
           </div>
           <div>
-            <strong>Finance Decision Lab</strong>
+            <strong>Pairs Trading Stocks</strong>
             <small>FP&A × quantitative research</small>
           </div>
         </div>

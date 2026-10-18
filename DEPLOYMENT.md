@@ -2,9 +2,9 @@
 
 ## Vercel
 
-1. Import the GitHub repository into Vercel and set **Root Directory** to `web`, Framework Preset to Next.js, and Node.js to 22.
-2. Deploy on Hobby for a personal, non-commercial portfolio. The app has a dated local snapshot mode and requires no external credentials initially.
-3. Verify `/`, both pairs, `/brief`, and `/api/workbook` from the actual deployment URL. The footer must read *Local dated snapshot · Azure service not connected* until Azure is live.
+The site is deployed at [pairs-trading-stocks.vercel.app](https://pairs-trading-stocks.vercel.app/) on Vercel Hobby. The Vercel project is `pairs-trading-stocks` in the `taheriastics-projects` scope. The first deployment was published with the Vercel CLI from `web/`; Git auto-deployment is not connected yet because the existing Vercel GitHub integration requires re-authorization. To publish a subsequent change manually, run `vercel --prod --scope taheriastics-projects` from `web/`.
+
+The site currently uses the dated local snapshot and requires no external credentials. Verify `/`, both pairs, `/brief`, and `/api/workbook` from the actual deployment URL. The footer must read *Local dated snapshot · Azure service not connected* until Azure is live. When connecting the GitHub repository later, set **Root Directory** to `web` and Framework Preset to Next.js.
 
 ## Azure Functions
 
