@@ -62,5 +62,7 @@ web/node_modules/
 web/.next/
 web/.vercel/
 web/*.tsbuildinfo
+!web/lib/
+!web/lib/**
 azure/local.settings.json
 !data/prices.csv
