@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./lab.css";
 export const metadata: Metadata = {
-  title: "Pairs Trading Stocks | FP&A and Historical Pair Research",
+  title: "Pairs Trading | Twenty-Year Strategy Lab",
   description:
-    "A filing-backed FP&A scenario planner and point-in-time historical pairs research case study for KO/PEP and MSFT/ORCL.",
+    "Explore 5,032 daily sessions, compare ten stock and pairs strategies, replay historical decisions and export formula-driven analysis.",
 };
 export default function RootLayout({
   children,

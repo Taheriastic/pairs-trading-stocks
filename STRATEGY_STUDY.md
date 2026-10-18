@@ -1,5 +1,7 @@
 # Twenty-year pairs strategy study — 18 October 2026
 
+> Archived first study. The current interactive release and ten-rule exploratory follow-up are documented in [DAILY_STRATEGY_REPORT.md](DAILY_STRATEGY_REPORT.md). This original study uses its first 252 sessions for formation; the current lab supplies a lead-in before its full 5,032-session displayed window. Display scope and performance windows therefore differ.
+
 ## Result
 
 **No tested method earned promotion as a validated trading strategy for either pair.** More permissive rules generated hundreds of trades, but none of the 96 predefined candidates for either pair met the development screen of positive after-cost return and at least 20 trades. The selection protocol therefore nominated no candidate for validation or final evaluation. This result does not show that no pairs strategy could ever work; it is a finding about these pairs, prices, costs, and candidate rules.

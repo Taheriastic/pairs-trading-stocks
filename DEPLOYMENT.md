@@ -12,9 +12,9 @@ The production app uses the committed, dated price and financial-statement snaps
 
 ## Release checks
 
-1. Regenerate the dated pair JSON when `src/research.py` or `data/prices.csv` changes: `PYTHONPATH=. .venv/bin/python scripts/build_analysis.py`. Review the trade counts and sample end date.
+1. For the current lab, regenerate research results with `node --experimental-strip-types scripts/summarize_daily_lab.mjs`. If source data changes, run the pinned-archive audit in `scripts/build_daily_lab.py`. Review the exact 5,032-session period, archive checksum, rule descriptions and result figures. The former `scripts/build_analysis.py` regenerates only legacy 2024 URLs.
 2. Run `PYTHONPATH=. .venv/bin/python -m pytest -q tests`, `npm run format:check --prefix web`, `npm run lint --prefix web`, `npm run typecheck --prefix web`, and `npm run build --prefix web`.
-3. After deployment, open both pairs on the production URL. Confirm prices and financial statement source links, the 2024-12-20 data cutoff, and the last actual trade dates. Try a qualified historical trade and a no-signal 2024 divergence on each pair. Check both what-if directions, the trade decision note and workbook formulas, changed FP&A assumptions, its brief and Excel export, and mobile width.
+3. After deployment, open both pairs on the production URL. Confirm 2006-10-16 to 2026-10-16 and 5,032 displayed sessions. Complete and skip/restart the six-step tour; test chart selection, range controls, cost changes, pair/strategy switching, long/short and long-only replays, the method comparison and ledger. Check the new report and study workbook against engine results and Excel formulas. Test SEC scenario changes and their separately labeled 2024 filing cutoff. Check mobile width and restore temporary viewport overrides.
 4. Keep the model's actual performance and visitor what-if results visibly separate. Research prices are adjusted series, not executable quotes. Do not publish a résumé claim based on an unverified deployment.
 
 ## Repository visibility

@@ -1,10 +1,10 @@
-import Dashboard from "@/components/Dashboard";
+import DailyLab from "@/components/DailyLab";
 import { financials, localData } from "@/lib/server";
-import type { StrategyStudyData } from "@/lib/types";
+import type { DailyData } from "@/lib/dailyTypes";
 export default async function Home() {
-  const [fin, study] = await Promise.all([
+  const [fin, data] = await Promise.all([
     financials(),
-    localData<StrategyStudyData>("strategy_study.json"),
+    localData<DailyData>("daily_lab.json"),
   ]);
-  return <Dashboard financials={fin} study={study} />;
+  return <DailyLab financials={fin} data={data} />;
 }

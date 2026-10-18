@@ -1,6 +1,18 @@
 # Methodology and limitations
 
-The [20-year method comparison](STRATEGY_STUDY.md) is a separate study from the fixed 2024 interactive simulator described below. It tested 96 predefined percentile-based configurations per pair, plus this existing cointegration baseline. Every candidate lost money in its development window after modeled costs, so no new rule was promoted. The app may show aggregate study findings without treating the 2026 research archive as an executable quote source.
+## Current 20-year interactive lab
+
+The main interface now uses the [daily-strategy study](DAILY_STRATEGY_REPORT.md) and `web/lib/dailyEngine.ts` for all 5,032 sessions from 2006-10-16 through 2026-10-16. A 252-session lead-in precedes the displayed history, so formation does not shorten the 20-year chart. Ten predefined exploratory rules compare continuous relative reversal, ratio convergence, relative trend and long-only stock rotation. Parameters and rules are frozen in `DAILY_RULES`; the full-history ranking is explicitly hindsight because these methods were proposed after earlier research.
+
+Each decision uses prices through its close, then fills at the following close. Relative-return rules compare trailing log returns; ratio rules compare the observed log ratio with its preceding-window mean. Reviews occur daily or every 5/20 study sessions according to the chosen rule. The direction sets equal long/short legs or one long stock at 1× gross exposure. Positions hold fixed index units until the next direction change; unchanged reviews incur no fictitious trade. A switch closes and opens positions, charging 10 bps per leg per transaction by default. The app slider supports cost sensitivity. The final sample close liquidates open positions, and the engine never opens a new position on that final close solely to close it immediately.
+
+Charts show normalized analytical indices, not nominal share prices. A relative reversal predicts a change in relative performance, not equality of two dollar stock prices. Portfolio and benchmark charts rebase to $10,000 at the selected window's left edge; calculations continue from the original strategy history. The equal-weight buy-and-hold reference uses next-close entry, fixed units, and the same entry/exit transaction rate.
+
+The visitor replay uses a chosen direction and holding period, independently of strategy switches. Its next-close entry, exit, unit quantities and costs use the same engine and index source as the report and Excel workbook. Replay P/L is never inserted into strategy results. SEC operating scenarios keep their distinct 2024 filing cutoff.
+
+## Archived cointegration simulator
+
+The [20-year method comparison](STRATEGY_STUDY.md) is a separate study from the fixed 2024 interactive simulator described below. It tested 96 predefined percentile-based configurations per pair, plus this existing cointegration baseline. No candidate met the positive-return and minimum-trade development screen, so no new rule was promoted. The app may show aggregate study findings without treating the 2026 research archive as an executable quote source.
 
 ## FP&A
 

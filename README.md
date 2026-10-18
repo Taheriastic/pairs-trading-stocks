@@ -1,49 +1,55 @@
 # Pairs Trading Stocks
 
-Live app: [pairs-trading-stocks.vercel.app](https://pairs-trading-stocks.vercel.app/). Its interactive trade simulator uses a fixed historical price snapshot through 2024-12-20; no live quotes are supplied. A separate [20-year strategy study](STRATEGY_STUDY.md) uses research prices through 2026-10-16 and reports aggregate comparisons. Its newer raw price rows are not redistributed in the app.
+[Open the live lab](https://pairs-trading-stocks.vercel.app/).
 
-A filing-backed FP&A scenario planner and historical pairs research app for **Coca-Cola / PepsiCo** and **Microsoft / Oracle**. The dashboard is designed as a finance case study: it makes assumptions, sources, losses, and inactive periods visible. The longer-horizon study found **no validated winner** for either pair among its tested methods. It is not a current trading signal service.
+A daily strategy research workspace for **Coca-Cola / PepsiCo** and **Microsoft / Oracle**, covering **5,032 common trading sessions, 16 October 2006–16 October 2026**. It compares ten continuous pair and stock-rotation rules, with clickable charts, historical decision replays, a guided walkthrough, a full position ledger, and matching analysis reports and Excel exports. SEC financial scenarios have their own explicitly dated 2024 filing snapshot.
 
-## What it does
+## What to try
 
-- Compares reported annual revenue, revenue growth, operating income, and operating margin from SEC 10-K facts available by **2024-12-23**. Fiscal periods are labeled and may differ.
-- Forecasts next-year revenue and operating income from user-selected growth and margin. A sequential bridge attributes change versus a base case to growth, then margin. Visitors can print a one-page brief and download a formula-driven Excel workbook.
-- Shows a historical daily pair signal using a 252-session training window before the selected date, a 60-session residual reference window, and a cointegration eligibility gate. Simulated fills occur at the next close, with costs. It also shows the inverse result, an equal-weight buy-and-hold reference, drawdown, completed trades, and cash days.
-- Opens with a four-step tutorial. A two-stock adjusted-price chart indexes both companies to 100, shows historical price ranges, and marks modeled entries and exits. Corporate split histories are linked to company investor sources.
-- Includes a decision drill for any historical date with a following session: choose the long and short legs and capital, reveal the next-close entry and modeled exit, then open a one-page decision note or download a formula-driven trade analysis workbook. A what-if trade is clearly separate from the tested strategy.
-- Uses **Next.js on Vercel** for the public site. An Azure Functions integration remains in the codebase but is not deployed or required by the app.
+1. Follow the six-step walkthrough or skip and reopen it from the header.
+2. Select a pair and a rule. Price, equity and relative-gap charts share the complete 20-year history. Range buttons change the displayed window; the strategy continues from earlier history.
+3. Change transaction costs, inspect a historical day, choose a position and holding period, then run a replay. Decisions fill at the next close. Visitor replays are separate from strategy performance.
+4. Compare all ten rules by return, drawdown or number of positions. Open a completed position or inspect annual performance.
+5. Export the selected method and replay. The workbook includes the 5,032-row equity path, annual results, position ledger, source checksum and editable replay P/L formulas.
+6. Open Fundamentals for SEC-backed revenue/margin scenarios, their operating-income bridge and a separate financial-model Excel export.
 
-## Current sample findings
+## What the research found
 
-The fixed sample runs from 2018-01-03 through 2024-12-20 after its formation window. At the current parameters, KO/PEP has three completed trades and MSFT/ORCL has one. MSFT/ORCL loses money in the simulated strategy. These findings may change with source corrections or a new research snapshot. The app shows the full results, including the benchmark and costs.
+The [daily-strategy report](DAILY_STRATEGY_REPORT.md) is the current app methodology and results. At 10 bps per leg per transaction, monthly loser **stock rotation** returned approximately **+356.3% for KO/PEP** and **+1,144.1% for MSFT/ORCL**, with maximum drawdowns of **−38.2%** and **−44.0%**. It owns one stock, with no short leg; it carries market exposure and does not demonstrate convergence. Other rules, including more active long/short reversals, lose money. The default is an educational example, not a validated winner or an optimized recommendation.
+
+The ten-rule menu was created after a previous [96-variant study](STRATEGY_STUDY.md). Its full-history ranking is hindsight. There is no genuinely untouched evaluation period for these new exploratory rules. Daily closes cannot test high-frequency execution, and no rule guarantees profit.
 
 ## Run locally
 
-Requires Node.js 22 and Python 3.12.
+The committed analytical snapshot is sufficient to run the app. Use Node.js 24 (Node.js 22.18+ also supports the TypeScript research scripts).
 
 ```bash
-python3.12 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt pytest
-PYTHONPATH=. .venv/bin/python -m pytest -q tests
 cd web
 npm ci
 npm run dev
 ```
 
-Open `http://localhost:3000`. The app works without cloud credentials. The Python `src/research.py` module regenerates pair outputs with `PYTHONPATH=. .venv/bin/python scripts/build_analysis.py`.
+For calculation checks:
 
-## Data provenance
+```bash
+node --experimental-strip-types --test tests/daily_engine.test.mjs
+node --experimental-strip-types scripts/summarize_daily_lab.mjs
+PYTHONPATH=. .venv/bin/python -m pytest -q tests
+npm run lint --prefix web
+npm run typecheck --prefix web
+npm run build --prefix web
+```
 
-See [DATA_SOURCES.md](DATA_SOURCES.md) and [METHODOLOGY.md](METHODOLOGY.md). The committed price CSV and result JSON are a fixed research snapshot; rebuilding requires deliberate source validation. The main CC0 S&P 500 dataset has **empty KO rows**, so KO comes from a separate CC0 dataset. That KO dataset's `Close` is an adjusted-like research series and provides no distinct raw close. Historical entry and conditional levels are therefore **research-price levels**, not executable nominal quotes. The KO export was published after the research cutoff, so its retrospective adjustment may incorporate later corporate actions; this limits a strict claim of point-in-time price availability. Signal model fitting itself never reads observations from the signal date or later.
+Python 3.12 and `requirements.txt` support the archive audit and the older research engine. To reproduce the new snapshot, obtain the checksum-pinned version-202 Kaggle ZIP and run `PYTHONPATH=. .venv/bin/python scripts/build_daily_lab.py /path/to/archive.zip`.
 
-`python3 scripts/prepare_data.py` verifies the pinned price archives and reuses the committed SEC snapshot. To deliberately refresh SEC facts, set `SEC_USER_AGENT` to your own contact-bearing user agent before running the script. Review any regenerated values and sources before committing them.
+## Data and limitations
 
-## Deployment
+The current chart uses **normalized analytical indices**, starting at 100 on 2006-10-16, from a publisher-labeled CC0 archive. A 252-session lead-in allows the first study-day decision to use earlier observations. Daily returns match the previous adjusted-price data over 2,005 overlapping sessions per company. The upstream provider's rights and full adjustment methodology have not been independently established; these are provisional research values, not executable dollar quotes. See [DATA_SOURCES.md](DATA_SOURCES.md).
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for the Vercel publication and verification steps. Do not describe the Azure integration as deployed; the user chose to continue on Vercel.
+The dashboard, brief and study workbook share `web/lib/dailyEngine.ts`. No same-close fills or future data are used for decisions. The app shows losses, actual cash costs and long-only market exposure. Borrow fees, financing, taxes, impact and intraday fills are excluded. Stock prices are separate from the SEC operating scenario. The former 2024 simulator and Python engine remain for reproducibility and legacy export URLs; they are not the main dashboard.
 
-## Development
+## Deployment and development
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for tests, data refresh policy, and documentation expectations. Project-specific agent guidance is in [AGENTS.md](AGENTS.md).
+Next.js runs on Vercel Hobby with committed snapshots and no live-feed credentials. Azure is not part of this release. See [DEPLOYMENT.md](DEPLOYMENT.md), [METHODOLOGY.md](METHODOLOGY.md), [CONTRIBUTING.md](CONTRIBUTING.md), and [AGENTS.md](AGENTS.md).
 
-MIT licensed code. Source datasets and SEC filings retain their own provenance and terms.
+MIT licensed code. Source datasets, brand names and SEC filings retain their provenance and terms. Company ticker monograms are identification marks created for this interface; they do not imply company endorsement.
