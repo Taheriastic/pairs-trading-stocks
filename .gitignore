@@ -56,3 +56,11 @@ data/cache/
 # Environment variables
 .env
 .env.local
+
+# Next.js and Azure local credentials
+web/node_modules/
+web/.next/
+web/.vercel/
+web/*.tsbuildinfo
+azure/local.settings.json
+!data/prices.csv
