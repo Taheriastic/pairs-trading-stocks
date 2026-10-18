@@ -1582,3 +1582,133 @@
     transition: none !important;
   }
 }
+
+.powerbi-panel {
+  margin-top: 24px;
+}
+.powerbi-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 40px;
+  align-items: start;
+}
+.powerbi-heading p {
+  max-width: 670px;
+}
+.powerbi-finding {
+  border-left: 3px solid #d6ad32;
+  padding-left: 20px;
+  display: grid;
+  gap: 7px;
+}
+.powerbi-finding > span {
+  font-size: 12px;
+  font-weight: 600;
+}
+.powerbi-finding > strong {
+  font-size: 38px;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+}
+.powerbi-finding > small {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--lab-muted, #65716b);
+}
+.powerbi-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  border-bottom: 1px solid #dce2dc;
+  padding-bottom: 12px;
+}
+.powerbi-pages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.powerbi-pages button {
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 5px;
+  padding: 10px 12px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: left;
+}
+.powerbi-pages button[aria-pressed="true"] {
+  background: #edf2ed;
+  border-color: #cbd8ce;
+  color: #153d30;
+}
+.powerbi-pages button > span {
+  font-size: 10px;
+  margin-right: 5px;
+  opacity: 0.65;
+}
+.powerbi-snapshot {
+  font-size: 11px;
+  color: #65716b;
+}
+.powerbi-preview {
+  margin: 18px 0 22px;
+}
+.powerbi-preview > a {
+  display: block;
+  border: 1px solid #e1e5df;
+  border-radius: 7px;
+  overflow: hidden;
+  background: #fafafa;
+}
+.powerbi-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.powerbi-preview figcaption {
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #59665e;
+}
+.powerbi-preview figcaption > b {
+  color: #1c352a;
+}
+.powerbi-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.powerbi-downloads a {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.powerbi-panel .powerbi-access-note {
+  font-size: 12px;
+  line-height: 1.8;
+  max-width: 960px;
+  margin-bottom: 0;
+}
+@media (max-width: 700px) {
+  .powerbi-heading {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .powerbi-finding {
+    max-width: 350px;
+  }
+  .powerbi-pages {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+  .powerbi-downloads {
+    flex-direction: column;
+  }
+}

@@ -16,6 +16,7 @@ import {
 import LabChart, { type ChartSeries } from "./LabChart";
 import LabTour, { TOUR_STEPS } from "./LabTour";
 import { LabMark, TickerMark } from "./LabMark";
+import PowerBIReport from "./PowerBIReport";
 
 const usd = (v: number, digits = 0) =>
   new Intl.NumberFormat("en-US", {
@@ -1184,6 +1185,7 @@ export default function DailyLab({
                 </small>
               </div>
             </div>
+            <PowerBIReport />
           </section>
         )}
         {tab === "sources" && (

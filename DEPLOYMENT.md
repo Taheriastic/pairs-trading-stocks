@@ -16,6 +16,7 @@ The production app uses the committed, dated price and financial-statement snaps
 2. Run `PYTHONPATH=. .venv/bin/python -m pytest -q tests`, `npm run format:check --prefix web`, `npm run lint --prefix web`, `npm run typecheck --prefix web`, and `npm run build --prefix web`.
 3. After deployment, open both pairs on the production URL. Confirm 2006-10-16 to 2026-10-16 and 5,032 displayed sessions. Complete and skip/restart the six-step tour; test chart selection, range controls, cost changes, pair/strategy switching, long/short and long-only replays, the method comparison and ledger. Check the new report and study workbook against engine results and Excel formulas. Test SEC scenario changes and their separately labeled 2024 filing cutoff. Check mobile width and restore temporary viewport overrides.
 4. Keep the model's actual performance and visitor what-if results visibly separate. Research prices are adjusted series, not executable quotes. Do not publish a résumé claim based on an unverified deployment.
+5. For Power BI changes, verify the original report in the service, regenerate its PDF/PBIX exports and PNG previews, and update `powerbi/manifest.json` after review. Run `node scripts/check_power_bi.mjs https://pairs-trading-stocks.vercel.app` after publishing to reconcile eight company scenarios, Excel formulas, and public report downloads. Review all three preview tabs at desktop and mobile widths. Do not enable paid capacity or describe static previews as a live Power BI embed.
 
 ## Repository visibility
 

@@ -1,0 +1,14 @@
+{
+  "verified_on": "2026-10-18",
+  "financial_cutoff": "2024-12-23",
+  "authoring_license": "Microsoft Fabric (Free)",
+  "public_embedding": "blocked_by_tenant_admin",
+  "files": {
+    "data/financials.json": "e5cf4a0294079b10c67551bced27b717a88ff497ad72d41ae7fdb0bd6d702f84",
+    "web/public/powerbi/fpa-report.pbix": "852d79dc10ed951a5294dd3fa2ad551556676e3fbc53c00c2eeeb0ed54d34425",
+    "web/public/powerbi/fpa-report.pdf": "a76c4424ade0862b736480266ac822410a3da6cd0e724b0072e4a2a11dff0e72",
+    "web/public/powerbi/report-1.png": "610eee7cc9bfd127999fd7af13b4d0c934bf5780f21c0be12927f3f120c95ba9",
+    "web/public/powerbi/report-2.png": "0e8958e4445a330b6be7a76b8f7e84dec0ce112676f3a066fd01be1511fd70f9",
+    "web/public/powerbi/report-3.png": "3dd78524ef15738ff4889ff98863f4cd874a88de976a02a740def020943319fa"
+  }
+}

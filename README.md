@@ -50,6 +50,12 @@ The dashboard, brief and study workbook share `web/lib/dailyEngine.ts`. No same-
 
 ## Deployment and development
 
+### Power BI FP&A report
+
+Fundamentals includes an authentic three-page Microsoft Power BI report preview, a public PDF, and the exported PBIX with imported SEC data. The report compares all four companies, offers 100 discrete growth/margin scenarios, and reconciles operating-income variance with a native waterfall. Microsoft's $2.45B sensitivity is a modeled one-percentage-point margin change at FY2024 reported revenue, not realized impact. See [report sources, reproduction, verification, and access limits](powerbi/README.md).
+
+The report was built and checked in a Microsoft Fabric (Free) personal workspace. The university tenant blocks public embed-code creation, so the site serves dated exports, not a live Power BI iframe. No trial, paid capacity, or Azure subscription was used.
+
 Next.js runs on Vercel Hobby with committed snapshots and no live-feed credentials. Azure is not part of this release. See [DEPLOYMENT.md](DEPLOYMENT.md), [METHODOLOGY.md](METHODOLOGY.md), [CONTRIBUTING.md](CONTRIBUTING.md), and [AGENTS.md](AGENTS.md).
 
 MIT licensed code. Source datasets, brand names and SEC filings retain their provenance and terms. Company ticker monograms are identification marks created for this interface; they do not imply company endorsement.
