@@ -180,7 +180,7 @@ export default function Dashboard({ financials }: { financials: Financials }) {
       <header className="site-header">
         <div className="brand">
           <div className="brand-icon">
-            F<span>·</span>D
+            P<span>·</span>T
           </div>
           <div>
             <strong>Pairs Trading Stocks</strong>
