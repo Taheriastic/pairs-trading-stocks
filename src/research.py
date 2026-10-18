@@ -142,6 +142,7 @@ def simulate(prices: pd.DataFrame, signals: list[dict], *, inverse=False) -> dic
             equity = cash
         curve.append({'date': day, 'equity': round(equity, 4)})
         if i == len(prices) - 1:
+            record['action'] = 'holding' if open_trade else 'no trade'
             if open_trade:
                 t = open_trade
                 exit_cost = COST_BPS / 10_000 * (abs(t['shares_y'] * py) + abs(t['shares_x'] * px))
@@ -197,5 +198,10 @@ def analyze(prices: pd.DataFrame) -> dict:
                   'capital': CAPITAL, 'cost_bps_per_leg_per_side': COST_BPS,
                   'cointegration_p_max': 0.05},
         'signals': signals, 'strategy': normal, 'inverse': inverse,
+        'prices': [
+            {'date': str(day), 'y_price': round(float(row.iloc[0]), 4),
+             'x_price': round(float(row.iloc[1]), 4)}
+            for day, row in prices.iloc[FORMATION:].iterrows()
+        ],
         'benchmark': benchmark(prices),
     }

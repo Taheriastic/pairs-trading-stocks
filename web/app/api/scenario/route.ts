@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { azureRequest, financials, scenarioFor } from "@/lib/server";
-import type { Scenario } from "@/lib/types";
+import { financials, scenarioFor } from "@/lib/server";
 import { allowRequest, clientKey } from "@/lib/rateLimit";
 export const runtime = "nodejs";
 export async function POST(request: NextRequest) {
@@ -16,16 +15,10 @@ export async function POST(request: NextRequest) {
     const growth = Number(body.growth);
     const margin = Number(body.margin);
     const fin = await financials();
-    scenarioFor(fin, symbol, growth, margin); // validate before forwarding
-    const remote = (await azureRequest("scenario", {
-      method: "POST",
-      body: JSON.stringify({ symbol, growth, margin }),
-    })) as Scenario | null;
-    const data = remote ?? scenarioFor(fin, symbol, growth, margin);
-    return NextResponse.json(
-      { ...data, serviceMode: remote ? "azure" : "snapshot" },
-      { headers: { "Cache-Control": "no-store" } },
-    );
+    const data = scenarioFor(fin, symbol, growth, margin);
+    return NextResponse.json(data, {
+      headers: { "Cache-Control": "no-store" },
+    });
   } catch {
     return NextResponse.json(
       { error: "Invalid scenario assumptions" },

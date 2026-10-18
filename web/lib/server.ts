@@ -60,28 +60,3 @@ export function scenarioFor(
     period_end: company.period_end,
   };
 }
-export async function azureRequest(
-  route: string,
-  init?: RequestInit,
-): Promise<unknown | null> {
-  const base = process.env.AZURE_FUNCTION_URL;
-  const key = process.env.AZURE_FUNCTION_KEY;
-  if (!base || !key) return null;
-  try {
-    const url = `${base.replace(/\/$/, "")}/api/${route}`;
-    const response = await fetch(url, {
-      ...init,
-      headers: {
-        "x-functions-key": key,
-        "content-type": "application/json",
-        ...(init?.headers || {}),
-      },
-      signal: AbortSignal.timeout(6500),
-      cache: "no-store",
-    });
-    if (!response.ok) return null;
-    return response.json();
-  } catch {
-    return null;
-  }
-}

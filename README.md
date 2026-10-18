@@ -1,6 +1,6 @@
 # Pairs Trading Stocks
 
-Live app: [pairs-trading-stocks.vercel.app](https://pairs-trading-stocks.vercel.app/). The public Vercel deployment currently uses the dated snapshot while Azure account setup is pending.
+Live app: [pairs-trading-stocks.vercel.app](https://pairs-trading-stocks.vercel.app/). The public Vercel deployment uses a fixed, sourced historical snapshot through 2024-12-20; no live quotes are supplied.
 
 A filing-backed FP&A scenario planner and historical pairs research app for **Coca-Cola / PepsiCo** and **Microsoft / Oracle**. The dashboard is designed as a finance case study: it makes assumptions, sources, losses, and inactive periods visible. It is not a current trading signal service.
 
@@ -9,7 +9,9 @@ A filing-backed FP&A scenario planner and historical pairs research app for **Co
 - Compares reported annual revenue, revenue growth, operating income, and operating margin from SEC 10-K facts available by **2024-12-23**. Fiscal periods are labeled and may differ.
 - Forecasts next-year revenue and operating income from user-selected growth and margin. A sequential bridge attributes change versus a base case to growth, then margin. Visitors can print a one-page brief and download a formula-driven Excel workbook.
 - Shows a historical daily pair signal using a 252-session training window before the selected date, a 60-session residual reference window, and a cointegration eligibility gate. Simulated fills occur at the next close, with costs. It also shows the inverse result, an equal-weight buy-and-hold reference, drawdown, completed trades, and cash days.
-- Uses **Next.js on Vercel** for the frontend and includes **Azure Functions** endpoints for historical analysis delivery and dynamic FP&A calculations. Until Azure is configured, the Vercel routes explicitly identify their dated local snapshot fallback.
+- Opens with a four-step tutorial. A two-stock adjusted-price chart indexes both companies to 100, shows historical price ranges, and marks modeled entries and exits. Corporate split histories are linked to company investor sources.
+- Includes a decision drill for any historical date with a following session: choose the long and short legs and capital, reveal the next-close entry and modeled exit, then open a one-page decision note or download a formula-driven trade analysis workbook. A what-if trade is clearly separate from the tested strategy.
+- Uses **Next.js on Vercel** for the public site. An Azure Functions integration remains in the codebase but is not deployed or required by the app.
 
 ## Current sample findings
 
@@ -28,7 +30,7 @@ npm ci
 npm run dev
 ```
 
-Open `http://localhost:3000`. The app works in clearly labeled snapshot mode without Azure credentials. The Python `src/research.py` module regenerates pair outputs with `PYTHONPATH=. .venv/bin/python scripts/build_analysis.py`.
+Open `http://localhost:3000`. The app works without cloud credentials. The Python `src/research.py` module regenerates pair outputs with `PYTHONPATH=. .venv/bin/python scripts/build_analysis.py`.
 
 ## Data provenance
 
@@ -38,7 +40,7 @@ See [DATA_SOURCES.md](DATA_SOURCES.md) and [METHODOLOGY.md](METHODOLOGY.md). The
 
 ## Deployment
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for Vercel and Azure setup, spending guardrails, and verification. The two environments are independent: the public app can operate in dated snapshot mode while the Azure subscription is being connected. Do not describe the Azure integration as deployed until the live API and dashboard badge both confirm it.
+See [DEPLOYMENT.md](DEPLOYMENT.md) for the Vercel publication and verification steps. Do not describe the Azure integration as deployed; the user chose to continue on Vercel.
 
 ## Development
 

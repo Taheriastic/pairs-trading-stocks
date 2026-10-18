@@ -21,6 +21,12 @@ After observing a qualifying close, simulate an equal-dollar long/short allocati
 
 The conditional target and stop are algebraic **levels for Y** at the selected close, holding X constant. They are not a forecast of Y's next quote. Historical fill and exit prices shown in the app are research-price series values.
 
+## Interactive decision drill
+
+The chart shows aligned adjusted research prices for both companies from the first eligible model day through 2024-12-20. Each line is divided by its own first displayed price and multiplied by 100 for comparison. The displayed dollar range is each stock's minimum and maximum adjusted research price in that same window. Trade markers represent the tested strategy only. Company investor sources document split histories; there are no split-event markers in this dataset. The KO series is especially limited by the separate, retrospectively produced archive described in `DATA_SOURCES.md`.
+
+For a visitor-selected historical day, the what-if drill allows either pair direction even if the strategy's eligibility or entry rules did not support a trade. It allocates half the selected capital to each leg at the next available adjusted close. On each subsequent close it checks the same target, stop, and 20-session rules, then simulates an exit at the next close. It applies 10 basis points per leg per side to entry and exit. A trade still open at the sample end exits there. The workbook carries the same values and formulas for signed shares, gross P/L, costs, net P/L, and net return. This exercise is an ex-post scenario and **is never added to the tested strategy curve or trade count**. Outcomes near the end of the sample are truncated by the fixed cutoff.
+
 ## Limits
 
 - Repeated daily cointegration tests can produce false positives. A low p-value is not a guarantee of future mean reversion.

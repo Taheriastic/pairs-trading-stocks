@@ -46,6 +46,7 @@ export type Trade = {
   return_pct: number;
 };
 export type CurvePoint = { date: string; equity: number };
+export type PairPrice = { date: string; y_price: number; x_price: number };
 export type Performance = {
   curve: CurvePoint[];
   trades: Trade[];
@@ -73,10 +74,10 @@ export type Analysis = {
     cointegration_p_max: number;
   };
   signals: Signal[];
+  prices: PairPrice[];
   strategy: Performance;
   inverse: Performance;
   benchmark: CurvePoint[];
-  serviceMode?: "azure" | "snapshot";
 };
 export type Scenario = {
   symbol: string;
@@ -94,5 +95,4 @@ export type Scenario = {
   total_change: number;
   filing_url: string;
   period_end: string;
-  serviceMode?: "azure" | "snapshot";
 };

@@ -15,6 +15,12 @@ def test_all_pairs_have_aligned_history_and_finite_outputs():
         data = analyze(prices)
         assert data['end_date'] == '2024-12-20'
         assert len(data['signals']) == len(prices) - FORMATION
+        assert len(data['prices']) == len(data['signals'])
+        assert data['prices'][0]['date'] == data['start_date']
+        assert data['prices'][-1]['date'] == data['end_date']
+        assert math.isclose(data['prices'][-1]['y_price'], float(prices.iloc[-1, 0]), abs_tol=0.0001)
+        assert math.isclose(data['prices'][-1]['x_price'], float(prices.iloc[-1, 1]), abs_tol=0.0001)
+        assert data['signals'][-1]['action'] == 'no trade'
         assert len(data['strategy']['curve']) == len(data['benchmark'])
         assert all(math.isfinite(p['equity']) for p in data['strategy']['curve'])
         assert data['strategy']['cash_days'] + data['strategy']['active_days'] == len(data['strategy']['curve'])
