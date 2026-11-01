@@ -1,0 +1,2984 @@
+{
+  "version": "2026-10-18-daily-v1",
+  "period": [
+    "2006-10-16",
+    "2026-10-16"
+  ],
+  "sessions": 5032,
+  "cost_bps": 10,
+  "status": "Exploratory; created after prior research. No untouched evaluation period.",
+  "pairs": {
+    "KO-PEP": {
+      "reversal1": {
+        "rule": {
+          "id": "reversal1",
+          "name": "Daily loser / winner",
+          "family": "Pair reversal",
+          "lookback": 1,
+          "cadence": 1,
+          "kind": "return",
+          "mode": "pair",
+          "follow": false,
+          "explanation": "Buy the stock with the weaker last-day return and short the stronger one. Recheck every close; switch only when the relative loser changes."
+        },
+        "total_return": -99.24862143492234,
+        "cagr": -21.72862821465298,
+        "drawdown": -99.27770362415446,
+        "positions": 2571,
+        "losses": 1752,
+        "cash_costs": 14153.176537753565,
+        "zero_cost_return": 29.397557273040253,
+        "annual": [
+          {
+            "year": "2006",
+            "returnPct": -3.0367247090827942,
+            "trades": 26,
+            "losses": 18
+          },
+          {
+            "year": "2007",
+            "returnPct": -19.049084342950795,
+            "trades": 128,
+            "losses": 75
+          },
+          {
+            "year": "2008",
+            "returnPct": -3.261879870936135,
+            "trades": 126,
+            "losses": 74
+          },
+          {
+            "year": "2009",
+            "returnPct": -12.38981150960422,
+            "trades": 134,
+            "losses": 81
+          },
+          {
+            "year": "2010",
+            "returnPct": -18.41430903382726,
+            "trades": 135,
+            "losses": 85
+          },
+          {
+            "year": "2011",
+            "returnPct": -17.84618409758253,
+            "trades": 127,
+            "losses": 83
+          },
+          {
+            "year": "2012",
+            "returnPct": -24.993764619986635,
+            "trades": 136,
+            "losses": 94
+          },
+          {
+            "year": "2013",
+            "returnPct": -16.64597360848741,
+            "trades": 129,
+            "losses": 83
+          },
+          {
+            "year": "2014",
+            "returnPct": -20.391022714336216,
+            "trades": 136,
+            "losses": 96
+          },
+          {
+            "year": "2015",
+            "returnPct": -20.656072355676393,
+            "trades": 125,
+            "losses": 95
+          },
+          {
+            "year": "2016",
+            "returnPct": -21.715259034493496,
+            "trades": 131,
+            "losses": 96
+          },
+          {
+            "year": "2017",
+            "returnPct": -19.159991072540272,
+            "trades": 133,
+            "losses": 96
+          },
+          {
+            "year": "2018",
+            "returnPct": -22.630480788668407,
+            "trades": 122,
+            "losses": 86
+          },
+          {
+            "year": "2019",
+            "returnPct": -21.213310285815602,
+            "trades": 135,
+            "losses": 87
+          },
+          {
+            "year": "2020",
+            "returnPct": -27.663822864025,
+            "trades": 126,
+            "losses": 91
+          },
+          {
+            "year": "2021",
+            "returnPct": -17.910903943280076,
+            "trades": 119,
+            "losses": 82
+          },
+          {
+            "year": "2022",
+            "returnPct": -20.276148572129248,
+            "trades": 109,
+            "losses": 75
+          },
+          {
+            "year": "2023",
+            "returnPct": -23.03223936363681,
+            "trades": 142,
+            "losses": 105
+          },
+          {
+            "year": "2024",
+            "returnPct": -38.33589030455996,
+            "trades": 130,
+            "losses": 101
+          },
+          {
+            "year": "2025",
+            "returnPct": -29.324840634446026,
+            "trades": 125,
+            "losses": 83
+          },
+          {
+            "year": "2026",
+            "returnPct": -30.34176935641173,
+            "trades": 97,
+            "losses": 66
+          }
+        ]
+      },
+      "reversal5": {
+        "rule": {
+          "id": "reversal5",
+          "name": "Weekly relative reversal",
+          "family": "Pair reversal",
+          "lookback": 5,
+          "cadence": 1,
+          "kind": "return",
+          "mode": "pair",
+          "follow": false,
+          "explanation": "Buy the weaker stock over five sessions and short the stronger. Assess daily, hold fixed units until the direction reverses."
+        },
+        "total_return": -85.31687665400901,
+        "cagr": -9.162243805564962,
+        "drawdown": -85.56703097292983,
+        "positions": 1119,
+        "losses": 681,
+        "cash_costs": 10156.288064131619,
+        "zero_cost_return": 38.154026532817454,
+        "annual": [
+          {
+            "year": "2006",
+            "returnPct": -5.327484651444525,
+            "trades": 12,
+            "losses": 10
+          },
+          {
+            "year": "2007",
+            "returnPct": -10.773953775503154,
+            "trades": 62,
+            "losses": 35
+          },
+          {
+            "year": "2008",
+            "returnPct": -4.546984109957409,
+            "trades": 48,
+            "losses": 24
+          },
+          {
+            "year": "2009",
+            "returnPct": -1.782634513338932,
+            "trades": 58,
+            "losses": 28
+          },
+          {
+            "year": "2010",
+            "returnPct": -12.280193462185151,
+            "trades": 61,
+            "losses": 40
+          },
+          {
+            "year": "2011",
+            "returnPct": -16.010091316489106,
+            "trades": 48,
+            "losses": 31
+          },
+          {
+            "year": "2012",
+            "returnPct": -8.053156503976123,
+            "trades": 52,
+            "losses": 31
+          },
+          {
+            "year": "2013",
+            "returnPct": -4.250712750745955,
+            "trades": 64,
+            "losses": 36
+          },
+          {
+            "year": "2014",
+            "returnPct": -8.978333752097567,
+            "trades": 56,
+            "losses": 38
+          },
+          {
+            "year": "2015",
+            "returnPct": -3.2558087183134132,
+            "trades": 43,
+            "losses": 26
+          },
+          {
+            "year": "2016",
+            "returnPct": -9.231770115332205,
+            "trades": 56,
+            "losses": 38
+          },
+          {
+            "year": "2017",
+            "returnPct": -14.084862254644692,
+            "trades": 68,
+            "losses": 51
+          },
+          {
+            "year": "2018",
+            "returnPct": -13.263632722962427,
+            "trades": 52,
+            "losses": 32
+          },
+          {
+            "year": "2019",
+            "returnPct": -4.1837419128286975,
+            "trades": 51,
+            "losses": 33
+          },
+          {
+            "year": "2020",
+            "returnPct": -2.773757476445171,
+            "trades": 60,
+            "losses": 29
+          },
+          {
+            "year": "2021",
+            "returnPct": -7.099601001822641,
+            "trades": 59,
+            "losses": 37
+          },
+          {
+            "year": "2022",
+            "returnPct": -6.366044013199856,
+            "trades": 65,
+            "losses": 38
+          },
+          {
+            "year": "2023",
+            "returnPct": -13.867144361802907,
+            "trades": 57,
+            "losses": 38
+          },
+          {
+            "year": "2024",
+            "returnPct": -19.396317087491354,
+            "trades": 58,
+            "losses": 43
+          },
+          {
+            "year": "2025",
+            "returnPct": -9.116035193350381,
+            "trades": 45,
+            "losses": 22
+          },
+          {
+            "year": "2026",
+            "returnPct": -6.142566306885488,
+            "trades": 44,
+            "losses": 21
+          }
+        ]
+      },
+      "reversal20": {
+        "rule": {
+          "id": "reversal20",
+          "name": "Monthly relative reversal",
+          "family": "Pair reversal",
+          "lookback": 20,
+          "cadence": 1,
+          "kind": "return",
+          "mode": "pair",
+          "follow": false,
+          "explanation": "Buy the 20-session relative loser and short the winner. The model expects relative performance to reverse; the prices do not need to become equal."
+        },
+        "total_return": -63.64933616239068,
+        "cagr": -4.94251774380019,
+        "drawdown": -67.71398641660785,
+        "positions": 523,
+        "losses": 292,
+        "cash_costs": 8351.10542458584,
+        "zero_cost_return": 3.7876996379408556,
+        "annual": [
+          {
+            "year": "2006",
+            "returnPct": -5.181007262402037,
+            "trades": 1,
+            "losses": 1
+          },
+          {
+            "year": "2007",
+            "returnPct": 2.444929801435025,
+            "trades": 31,
+            "losses": 12
+          },
+          {
+            "year": "2008",
+            "returnPct": 3.627078478206802,
+            "trades": 34,
+            "losses": 19
+          },
+          {
+            "year": "2009",
+            "returnPct": 8.052549980058865,
+            "trades": 35,
+            "losses": 15
+          },
+          {
+            "year": "2010",
+            "returnPct": -18.384423736967715,
+            "trades": 16,
+            "losses": 10
+          },
+          {
+            "year": "2011",
+            "returnPct": -7.834546855824087,
+            "trades": 24,
+            "losses": 13
+          },
+          {
+            "year": "2012",
+            "returnPct": -1.713025463892004,
+            "trades": 31,
+            "losses": 18
+          },
+          {
+            "year": "2013",
+            "returnPct": -3.8628836493228236,
+            "trades": 37,
+            "losses": 25
+          },
+          {
+            "year": "2014",
+            "returnPct": 16.355776343658214,
+            "trades": 29,
+            "losses": 14
+          },
+          {
+            "year": "2015",
+            "returnPct": -2.1176570926827676,
+            "trades": 39,
+            "losses": 25
+          },
+          {
+            "year": "2016",
+            "returnPct": -6.6373917782186815,
+            "trades": 21,
+            "losses": 14
+          },
+          {
+            "year": "2017",
+            "returnPct": -10.62955076131068,
+            "trades": 30,
+            "losses": 20
+          },
+          {
+            "year": "2018",
+            "returnPct": 0.03053847031628809,
+            "trades": 31,
+            "losses": 16
+          },
+          {
+            "year": "2019",
+            "returnPct": -16.188903624677952,
+            "trades": 32,
+            "losses": 22
+          },
+          {
+            "year": "2020",
+            "returnPct": 9.887220359044523,
+            "trades": 24,
+            "losses": 7
+          },
+          {
+            "year": "2021",
+            "returnPct": 0.7433055118206466,
+            "trades": 22,
+            "losses": 9
+          },
+          {
+            "year": "2022",
+            "returnPct": -14.051915939103466,
+            "trades": 20,
+            "losses": 13
+          },
+          {
+            "year": "2023",
+            "returnPct": -6.336512899508717,
+            "trades": 23,
+            "losses": 15
+          },
+          {
+            "year": "2024",
+            "returnPct": -5.271174955566627,
+            "trades": 21,
+            "losses": 12
+          },
+          {
+            "year": "2025",
+            "returnPct": -16.276283481993094,
+            "trades": 16,
+            "losses": 8
+          },
+          {
+            "year": "2026",
+            "returnPct": -16.498152026439328,
+            "trades": 6,
+            "losses": 4
+          }
+        ]
+      },
+      "reversal60": {
+        "rule": {
+          "id": "reversal60",
+          "name": "Quarterly relative reversal",
+          "family": "Pair reversal",
+          "lookback": 60,
+          "cadence": 1,
+          "kind": "return",
+          "mode": "pair",
+          "follow": false,
+          "explanation": "Use 60-session relative returns to set equal long and short legs. Review daily and switch when the relative performance gap changes sign."
+        },
+        "total_return": -35.97130195944167,
+        "cagr": -2.208430887705959,
+        "drawdown": -41.76196632618079,
+        "positions": 321,
+        "losses": 183,
+        "cash_costs": 6201.818948444667,
+        "zero_cost_return": 21.952628787728322,
+        "annual": [
+          {
+            "year": "2006",
+            "returnPct": -1.3228735379992584,
+            "trades": 3,
+            "losses": 2
+          },
+          {
+            "year": "2007",
+            "returnPct": 4.459972340880802,
+            "trades": 14,
+            "losses": 7
+          },
+          {
+            "year": "2008",
+            "returnPct": -1.6213875381459908,
+            "trades": 22,
+            "losses": 15
+          },
+          {
+            "year": "2009",
+            "returnPct": 2.873299838159449,
+            "trades": 34,
+            "losses": 18
+          },
+          {
+            "year": "2010",
+            "returnPct": -12.933675484223105,
+            "trades": 14,
+            "losses": 10
+          },
+          {
+            "year": "2011",
+            "returnPct": 6.443822833100921,
+            "trades": 17,
+            "losses": 5
+          },
+          {
+            "year": "2012",
+            "returnPct": -1.2558169169827438,
+            "trades": 18,
+            "losses": 12
+          },
+          {
+            "year": "2013",
+            "returnPct": 2.081930959252154,
+            "trades": 15,
+            "losses": 8
+          },
+          {
+            "year": "2014",
+            "returnPct": 7.592902191854467,
+            "trades": 23,
+            "losses": 11
+          },
+          {
+            "year": "2015",
+            "returnPct": -3.167206650177279,
+            "trades": 25,
+            "losses": 14
+          },
+          {
+            "year": "2016",
+            "returnPct": -5.057252374838805,
+            "trades": 22,
+            "losses": 13
+          },
+          {
+            "year": "2017",
+            "returnPct": -1.6166551578581156,
+            "trades": 7,
+            "losses": 4
+          },
+          {
+            "year": "2018",
+            "returnPct": -0.1788241212396513,
+            "trades": 10,
+            "losses": 6
+          },
+          {
+            "year": "2019",
+            "returnPct": 1.424890759788755,
+            "trades": 19,
+            "losses": 13
+          },
+          {
+            "year": "2020",
+            "returnPct": -6.5557973038978705,
+            "trades": 20,
+            "losses": 10
+          },
+          {
+            "year": "2021",
+            "returnPct": 0.9515628704371837,
+            "trades": 11,
+            "losses": 6
+          },
+          {
+            "year": "2022",
+            "returnPct": -5.329502625657634,
+            "trades": 5,
+            "losses": 3
+          },
+          {
+            "year": "2023",
+            "returnPct": -6.014341696503878,
+            "trades": 14,
+            "losses": 12
+          },
+          {
+            "year": "2024",
+            "returnPct": -3.557707569676194,
+            "trades": 13,
+            "losses": 8
+          },
+          {
+            "year": "2025",
+            "returnPct": -5.277107822309334,
+            "trades": 5,
+            "losses": 1
+          },
+          {
+            "year": "2026",
+            "returnPct": -13.033295940047928,
+            "trades": 10,
+            "losses": 5
+          }
+        ]
+      },
+      "ratio20": {
+        "rule": {
+          "id": "ratio20",
+          "name": "Fast ratio convergence",
+          "family": "Pair reversal",
+          "lookback": 20,
+          "cadence": 1,
+          "kind": "ratio",
+          "mode": "pair",
+          "follow": false,
+          "explanation": "Compare the log price ratio with its preceding 20-session average. Buy the relatively low side and short the relatively high side."
+        },
+        "total_return": -63.26227493756025,
+        "cagr": -4.892073330791058,
+        "drawdown": -67.29930109484509,
+        "positions": 645,
+        "losses": 335,
+        "cash_costs": 10171.88642427817,
+        "zero_cost_return": 33.82910497346081,
+        "annual": [
+          {
+            "year": "2006",
+            "returnPct": -4.6639600448750045,
+            "trades": 4,
+            "losses": 2
+          },
+          {
+            "year": "2007",
+            "returnPct": -0.02517397658404752,
+            "trades": 34,
+            "losses": 14
+          },
+          {
+            "year": "2008",
+            "returnPct": 11.263643581505711,
+            "trades": 36,
+            "losses": 17
+          },
+          {
+            "year": "2009",
+            "returnPct": 1.6218166910658027,
+            "trades": 43,
+            "losses": 20
+          },
+          {
+            "year": "2010",
+            "returnPct": -16.54133074732087,
+            "trades": 28,
+            "losses": 19
+          },
+          {
+            "year": "2011",
+            "returnPct": -12.177615901757521,
+            "trades": 18,
+            "losses": 10
+          },
+          {
+            "year": "2012",
+            "returnPct": -1.02607137152948,
+            "trades": 31,
+            "losses": 14
+          },
+          {
+            "year": "2013",
+            "returnPct": 4.467382573741041,
+            "trades": 35,
+            "losses": 15
+          },
+          {
+            "year": "2014",
+            "returnPct": 15.18768239604491,
+            "trades": 36,
+            "losses": 14
+          },
+          {
+            "year": "2015",
+            "returnPct": -0.6167753383519714,
+            "trades": 41,
+            "losses": 19
+          },
+          {
+            "year": "2016",
+            "returnPct": -11.253361481562841,
+            "trades": 32,
+            "losses": 22
+          },
+          {
+            "year": "2017",
+            "returnPct": -9.54418571720117,
+            "trades": 30,
+            "losses": 17
+          },
+          {
+            "year": "2018",
+            "returnPct": -6.918584100481739,
+            "trades": 27,
+            "losses": 14
+          },
+          {
+            "year": "2019",
+            "returnPct": 2.642200258897387,
+            "trades": 40,
+            "losses": 20
+          },
+          {
+            "year": "2020",
+            "returnPct": 4.361702340620233,
+            "trades": 34,
+            "losses": 11
+          },
+          {
+            "year": "2021",
+            "returnPct": -9.612541618659476,
+            "trades": 26,
+            "losses": 18
+          },
+          {
+            "year": "2022",
+            "returnPct": -14.97236369953906,
+            "trades": 36,
+            "losses": 22
+          },
+          {
+            "year": "2023",
+            "returnPct": -5.397079130828386,
+            "trades": 39,
+            "losses": 24
+          },
+          {
+            "year": "2024",
+            "returnPct": -5.685038330797331,
+            "trades": 25,
+            "losses": 16
+          },
+          {
+            "year": "2025",
+            "returnPct": -15.711977301575175,
+            "trades": 30,
+            "losses": 17
+          },
+          {
+            "year": "2026",
+            "returnPct": -15.064516490595214,
+            "trades": 20,
+            "losses": 10
+          }
+        ]
+      },
+      "ratio252": {
+        "rule": {
+          "id": "ratio252",
+          "name": "Annual ratio convergence",
+          "family": "Pair reversal",
+          "lookback": 252,
+          "cadence": 1,
+          "kind": "ratio",
+          "mode": "pair",
+          "follow": false,
+          "explanation": "Trade the deviation of the log price ratio from its prior 252-session mean. Assess daily, without a cointegration gate."
+        },
+        "total_return": -27.369955123885724,
+        "cagr": -1.5890570544120575,
+        "drawdown": -39.328969836925474,
+        "positions": 156,
+        "losses": 77,
+        "cash_costs": 2971.437235527383,
+        "zero_cost_return": -0.5273036816888288,
+        "annual": [
+          {
+            "year": "2006",
+            "returnPct": 0.7437241943906381,
+            "trades": 2,
+            "losses": 1
+          },
+          {
+            "year": "2007",
+            "returnPct": -3.9538443086045816,
+            "trades": 0,
+            "losses": 0
+          },
+          {
+            "year": "2008",
+            "returnPct": 11.1828230352089,
+            "trades": 14,
+            "losses": 3
+          },
+          {
+            "year": "2009",
+            "returnPct": -10.496128781615532,
+            "trades": 6,
+            "losses": 4
+          },
+          {
+            "year": "2010",
+            "returnPct": 1.6854963391655042,
+            "trades": 6,
+            "losses": 3
+          },
+          {
+            "year": "2011",
+            "returnPct": -3.326763085570439,
+            "trades": 0,
+            "losses": 0
+          },
+          {
+            "year": "2012",
+            "returnPct": 1.4681552650974705,
+            "trades": 19,
+            "losses": 11
+          },
+          {
+            "year": "2013",
+            "returnPct": -3.4198414947612332,
+            "trades": 3,
+            "losses": 1
+          },
+          {
+            "year": "2014",
+            "returnPct": 2.0071643746615297,
+            "trades": 11,
+            "losses": 10
+          },
+          {
+            "year": "2015",
+            "returnPct": -2.607976543502899,
+            "trades": 3,
+            "losses": 2
+          },
+          {
+            "year": "2016",
+            "returnPct": -4.204290942154254,
+            "trades": 3,
+            "losses": 2
+          },
+          {
+            "year": "2017",
+            "returnPct": -0.8411152362464258,
+            "trades": 10,
+            "losses": 4
+          },
+          {
+            "year": "2018",
+            "returnPct": 2.141812427752665,
+            "trades": 17,
+            "losses": 5
+          },
+          {
+            "year": "2019",
+            "returnPct": 7.420075881898547,
+            "trades": 8,
+            "losses": 6
+          },
+          {
+            "year": "2020",
+            "returnPct": -2.068541936614132,
+            "trades": 16,
+            "losses": 8
+          },
+          {
+            "year": "2021",
+            "returnPct": 1.8511866783319508,
+            "trades": 9,
+            "losses": 4
+          },
+          {
+            "year": "2022",
+            "returnPct": -1.951420218500688,
+            "trades": 10,
+            "losses": 7
+          },
+          {
+            "year": "2023",
+            "returnPct": -4.234836714764912,
+            "trades": 7,
+            "losses": 5
+          },
+          {
+            "year": "2024",
+            "returnPct": -8.990852308631215,
+            "trades": 0,
+            "losses": 0
+          },
+          {
+            "year": "2025",
+            "returnPct": -0.17633053060888138,
+            "trades": 4,
+            "losses": 0
+          },
+          {
+            "year": "2026",
+            "returnPct": -11.125057049372089,
+            "trades": 8,
+            "losses": 1
+          }
+        ]
+      },
+      "pairtrend60": {
+        "rule": {
+          "id": "pairtrend60",
+          "name": "Relative trend control",
+          "family": "Pair trend",
+          "lookback": 60,
+          "cadence": 1,
+          "kind": "return",
+          "mode": "pair",
+          "follow": true,
+          "explanation": "A control that buys the 60-session relative winner and shorts the loser. It tests persistence rather than convergence."
+        },
+        "total_return": -60.52812638597004,
+        "cagr": -4.54948480186439,
+        "drawdown": -66.97232573123469,
+        "positions": 321,
+        "losses": 231,
+        "cash_costs": 3637.094430332796,
+        "zero_cost_return": -24.752761147744916,
+        "annual": [
+          {
+            "year": "2006",
+            "returnPct": 0.23572924682431218,
+            "trades": 3,
+            "losses": 2
+          },
+          {
+            "year": "2007",
+            "returnPct": -9.66660552598796,
+            "trades": 14,
+            "losses": 9
+          },
+          {
+            "year": "2008",
+            "returnPct": -7.132900114917662,
+            "trades": 22,
+            "losses": 12
+          },
+          {
+            "year": "2009",
+            "returnPct": -15.6424414475544,
+            "trades": 34,
+            "losses": 24
+          },
+          {
+            "year": "2010",
+            "returnPct": 7.393335800146583,
+            "trades": 14,
+            "losses": 8
+          },
+          {
+            "year": "2011",
+            "returnPct": -12.24970929144943,
+            "trades": 17,
+            "losses": 15
+          },
+          {
+            "year": "2012",
+            "returnPct": -5.8585585969069935,
+            "trades": 18,
+            "losses": 14
+          },
+          {
+            "year": "2013",
+            "returnPct": -7.953939204328897,
+            "trades": 15,
+            "losses": 12
+          },
+          {
+            "year": "2014",
+            "returnPct": -15.457127518566116,
+            "trades": 23,
+            "losses": 20
+          },
+          {
+            "year": "2015",
+            "returnPct": -6.628305637322207,
+            "trades": 25,
+            "losses": 19
+          },
+          {
+            "year": "2016",
+            "returnPct": -3.702877049134534,
+            "trades": 22,
+            "losses": 16
+          },
+          {
+            "year": "2017",
+            "returnPct": -1.263027594192434,
+            "trades": 7,
+            "losses": 6
+          },
+          {
+            "year": "2018",
+            "returnPct": -3.911028957440421,
+            "trades": 10,
+            "losses": 7
+          },
+          {
+            "year": "2019",
+            "returnPct": -8.96610735940091,
+            "trades": 19,
+            "losses": 15
+          },
+          {
+            "year": "2020",
+            "returnPct": -1.6397689443075736,
+            "trades": 20,
+            "losses": 13
+          },
+          {
+            "year": "2021",
+            "returnPct": -5.632713131224265,
+            "trades": 11,
+            "losses": 8
+          },
+          {
+            "year": "2022",
+            "returnPct": 3.3263614002039255,
+            "trades": 5,
+            "losses": 3
+          },
+          {
+            "year": "2023",
+            "returnPct": 0.5164645487021113,
+            "trades": 14,
+            "losses": 8
+          },
+          {
+            "year": "2024",
+            "returnPct": -1.81850801993374,
+            "trades": 13,
+            "losses": 9
+          },
+          {
+            "year": "2025",
+            "returnPct": 2.5952541113897443,
+            "trades": 5,
+            "losses": 4
+          },
+          {
+            "year": "2026",
+            "returnPct": 6.883523332562413,
+            "trades": 10,
+            "losses": 7
+          }
+        ]
+      },
+      "rotation5": {
+        "rule": {
+          "id": "rotation5",
+          "name": "Weekly loser rotation",
+          "family": "Stock rotation",
+          "lookback": 5,
+          "cadence": 5,
+          "kind": "return",
+          "mode": "long",
+          "follow": false,
+          "explanation": "Every five sessions, invest in the weaker stock over the previous five sessions. Hold one stock, with no short leg. This carries stock-market exposure."
+        },
+        "total_return": 98.42321512265603,
+        "cagr": 3.49187193080458,
+        "drawdown": -38.347098343523655,
+        "positions": 526,
+        "losses": 251,
+        "cash_costs": 16857.975228223,
+        "zero_cost_return": 467.92933373843795,
+        "annual": [
+          {
+            "year": "2006",
+            "returnPct": 1.7219069573389811,
+            "trades": 9,
+            "losses": 4
+          },
+          {
+            "year": "2007",
+            "returnPct": 24.829036357315417,
+            "trades": 30,
+            "losses": 11
+          },
+          {
+            "year": "2008",
+            "returnPct": -23.476879237792748,
+            "trades": 27,
+            "losses": 15
+          },
+          {
+            "year": "2009",
+            "returnPct": 17.968940841860203,
+            "trades": 30,
+            "losses": 15
+          },
+          {
+            "year": "2010",
+            "returnPct": 7.979276177521988,
+            "trades": 29,
+            "losses": 12
+          },
+          {
+            "year": "2011",
+            "returnPct": -2.6132538012418216,
+            "trades": 18,
+            "losses": 10
+          },
+          {
+            "year": "2012",
+            "returnPct": 0.33148752924585523,
+            "trades": 28,
+            "losses": 15
+          },
+          {
+            "year": "2013",
+            "returnPct": 18.66041964007468,
+            "trades": 28,
+            "losses": 10
+          },
+          {
+            "year": "2014",
+            "returnPct": 7.622130519441406,
+            "trades": 26,
+            "losses": 10
+          },
+          {
+            "year": "2015",
+            "returnPct": 7.864911214072912,
+            "trades": 27,
+            "losses": 12
+          },
+          {
+            "year": "2016",
+            "returnPct": -11.056377823882457,
+            "trades": 18,
+            "losses": 12
+          },
+          {
+            "year": "2017",
+            "returnPct": 2.213646393096824,
+            "trades": 24,
+            "losses": 12
+          },
+          {
+            "year": "2018",
+            "returnPct": 2.1146101025915964,
+            "trades": 30,
+            "losses": 14
+          },
+          {
+            "year": "2019",
+            "returnPct": 16.068047797105024,
+            "trades": 29,
+            "losses": 13
+          },
+          {
+            "year": "2020",
+            "returnPct": 12.435725797476916,
+            "trades": 28,
+            "losses": 13
+          },
+          {
+            "year": "2021",
+            "returnPct": 17.237512191604033,
+            "trades": 21,
+            "losses": 7
+          },
+          {
+            "year": "2022",
+            "returnPct": 5.47734291597386,
+            "trades": 28,
+            "losses": 11
+          },
+          {
+            "year": "2023",
+            "returnPct": -10.964876074706586,
+            "trades": 26,
+            "losses": 13
+          },
+          {
+            "year": "2024",
+            "returnPct": -4.085748237654752,
+            "trades": 28,
+            "losses": 18
+          },
+          {
+            "year": "2025",
+            "returnPct": -16.90654077969558,
+            "trades": 19,
+            "losses": 13
+          },
+          {
+            "year": "2026",
+            "returnPct": 12.03949280699057,
+            "trades": 23,
+            "losses": 11
+          }
+        ]
+      },
+      "rotation20": {
+        "rule": {
+          "id": "rotation20",
+          "name": "Monthly loser rotation",
+          "family": "Stock rotation",
+          "lookback": 20,
+          "cadence": 20,
+          "kind": "return",
+          "mode": "long",
+          "follow": false,
+          "explanation": "Every 20 sessions, buy the weaker performer over the previous 20 sessions. Keep holding it until a later review selects the other company. No short leg."
+        },
+        "total_return": 356.2830532893198,
+        "cagr": 7.899810625729864,
+        "drawdown": -38.15111753039494,
+        "positions": 121,
+        "losses": 41,
+        "cash_costs": 6514.149532005962,
+        "zero_cost_return": 480.4698304093448,
+        "annual": [
+          {
+            "year": "2006",
+            "returnPct": 0.6596572151827296,
+            "trades": 1,
+            "losses": 0
+          },
+          {
+            "year": "2007",
+            "returnPct": 32.988359013121226,
+            "trades": 7,
+            "losses": 2
+          },
+          {
+            "year": "2008",
+            "returnPct": -18.58774641466806,
+            "trades": 7,
+            "losses": 4
+          },
+          {
+            "year": "2009",
+            "returnPct": 25.719214958628946,
+            "trades": 8,
+            "losses": 2
+          },
+          {
+            "year": "2010",
+            "returnPct": 4.72985331629352,
+            "trades": 4,
+            "losses": 1
+          },
+          {
+            "year": "2011",
+            "returnPct": 0.07252345304611385,
+            "trades": 5,
+            "losses": 2
+          },
+          {
+            "year": "2012",
+            "returnPct": 3.8134613199915846,
+            "trades": 6,
+            "losses": 2
+          },
+          {
+            "year": "2013",
+            "returnPct": 14.710937565133374,
+            "trades": 5,
+            "losses": 1
+          },
+          {
+            "year": "2014",
+            "returnPct": 22.234709798480125,
+            "trades": 9,
+            "losses": 2
+          },
+          {
+            "year": "2015",
+            "returnPct": 7.012682056211261,
+            "trades": 9,
+            "losses": 3
+          },
+          {
+            "year": "2016",
+            "returnPct": 4.118660162293053,
+            "trades": 7,
+            "losses": 3
+          },
+          {
+            "year": "2017",
+            "returnPct": 17.54029378293469,
+            "trades": 6,
+            "losses": 0
+          },
+          {
+            "year": "2018",
+            "returnPct": 7.346301891304696,
+            "trades": 8,
+            "losses": 5
+          },
+          {
+            "year": "2019",
+            "returnPct": 24.4435412636828,
+            "trades": 5,
+            "losses": 2
+          },
+          {
+            "year": "2020",
+            "returnPct": 16.296606459752994,
+            "trades": 6,
+            "losses": 1
+          },
+          {
+            "year": "2021",
+            "returnPct": 24.661403894382516,
+            "trades": 6,
+            "losses": 1
+          },
+          {
+            "year": "2022",
+            "returnPct": -3.189563985774646,
+            "trades": 2,
+            "losses": 1
+          },
+          {
+            "year": "2023",
+            "returnPct": -2.685517871460852,
+            "trades": 6,
+            "losses": 3
+          },
+          {
+            "year": "2024",
+            "returnPct": -0.12612601842940663,
+            "trades": 6,
+            "losses": 3
+          },
+          {
+            "year": "2025",
+            "returnPct": -4.981753413257972,
+            "trades": 5,
+            "losses": 1
+          },
+          {
+            "year": "2026",
+            "returnPct": -3.7351410452244216,
+            "trades": 3,
+            "losses": 2
+          }
+        ]
+      },
+      "trend60": {
+        "rule": {
+          "id": "trend60",
+          "name": "Monthly trend rotation",
+          "family": "Stock rotation",
+          "lookback": 60,
+          "cadence": 20,
+          "kind": "return",
+          "mode": "long",
+          "follow": true,
+          "explanation": "Every 20 sessions, hold the stronger stock over the previous 60 sessions. A long-only trend control with market exposure."
+        },
+        "total_return": 285.6304201968812,
+        "cagr": 6.99438693496881,
+        "drawdown": -45.48336308919049,
+        "positions": 73,
+        "losses": 31,
+        "cash_costs": 2947.8038233765847,
+        "zero_cost_return": 345.78599928527944,
+        "annual": [
+          {
+            "year": "2006",
+            "returnPct": 10.821671739986805,
+            "trades": 1,
+            "losses": 0
+          },
+          {
+            "year": "2007",
+            "returnPct": 18.371277929121675,
+            "trades": 4,
+            "losses": 2
+          },
+          {
+            "year": "2008",
+            "returnPct": -29.720310240933635,
+            "trades": 4,
+            "losses": 3
+          },
+          {
+            "year": "2009",
+            "returnPct": 19.48704547091531,
+            "trades": 4,
+            "losses": 1
+          },
+          {
+            "year": "2010",
+            "returnPct": 26.646008669416954,
+            "trades": 2,
+            "losses": 0
+          },
+          {
+            "year": "2011",
+            "returnPct": -4.161776443430054,
+            "trades": 3,
+            "losses": 2
+          },
+          {
+            "year": "2012",
+            "returnPct": 4.092562514573594,
+            "trades": 4,
+            "losses": 2
+          },
+          {
+            "year": "2013",
+            "returnPct": 23.37378070795644,
+            "trades": 3,
+            "losses": 2
+          },
+          {
+            "year": "2014",
+            "returnPct": -0.8528220006768894,
+            "trades": 7,
+            "losses": 3
+          },
+          {
+            "year": "2015",
+            "returnPct": 2.402681815794949,
+            "trades": 5,
+            "losses": 2
+          },
+          {
+            "year": "2016",
+            "returnPct": 10.389476352783955,
+            "trades": 1,
+            "losses": 0
+          },
+          {
+            "year": "2017",
+            "returnPct": 12.53206933352069,
+            "trades": 4,
+            "losses": 2
+          },
+          {
+            "year": "2018",
+            "returnPct": -4.391524366069377,
+            "trades": 3,
+            "losses": 1
+          },
+          {
+            "year": "2019",
+            "returnPct": 16.791094743817858,
+            "trades": 4,
+            "losses": 1
+          },
+          {
+            "year": "2020",
+            "returnPct": -1.0998959310142942,
+            "trades": 3,
+            "losses": 1
+          },
+          {
+            "year": "2021",
+            "returnPct": 16.013665702270806,
+            "trades": 2,
+            "losses": 0
+          },
+          {
+            "year": "2022",
+            "returnPct": 12.193034804654168,
+            "trades": 2,
+            "losses": 0
+          },
+          {
+            "year": "2023",
+            "returnPct": -7.044836793290776,
+            "trades": 5,
+            "losses": 4
+          },
+          {
+            "year": "2024",
+            "returnPct": 2.9810472279676814,
+            "trades": 3,
+            "losses": 1
+          },
+          {
+            "year": "2025",
+            "returnPct": 5.374601923820532,
+            "trades": 4,
+            "losses": 1
+          },
+          {
+            "year": "2026",
+            "returnPct": 22.81075631138998,
+            "trades": 5,
+            "losses": 3
+          }
+        ]
+      }
+    },
+    "MSFT-ORCL": {
+      "reversal1": {
+        "rule": {
+          "id": "reversal1",
+          "name": "Daily loser / winner",
+          "family": "Pair reversal",
+          "lookback": 1,
+          "cadence": 1,
+          "kind": "return",
+          "mode": "pair",
+          "follow": false,
+          "explanation": "Buy the stock with the weaker last-day return and short the stronger one. Recheck every close; switch only when the relative loser changes."
+        },
+        "total_return": -98.1586989946863,
+        "cagr": -18.134472820807567,
+        "drawdown": -98.1824780061674,
+        "positions": 2528,
+        "losses": 1436,
+        "cash_costs": 12257.93830596219,
+        "zero_cost_return": 191.0298512542015,
+        "annual": [
+          {
+            "year": "2006",
+            "returnPct": -8.343008974491973,
+            "trades": 24,
+            "losses": 15
+          },
+          {
+            "year": "2007",
+            "returnPct": -25.509706807183452,
+            "trades": 131,
+            "losses": 67
+          },
+          {
+            "year": "2008",
+            "returnPct": -26.16119979588587,
+            "trades": 131,
+            "losses": 71
+          },
+          {
+            "year": "2009",
+            "returnPct": 6.873215955576306,
+            "trades": 138,
+            "losses": 75
+          },
+          {
+            "year": "2010",
+            "returnPct": -14.78149375412231,
+            "trades": 133,
+            "losses": 77
+          },
+          {
+            "year": "2011",
+            "returnPct": -15.763153386367023,
+            "trades": 127,
+            "losses": 69
+          },
+          {
+            "year": "2012",
+            "returnPct": -13.464363000467172,
+            "trades": 122,
+            "losses": 73
+          },
+          {
+            "year": "2013",
+            "returnPct": -24.040395384228276,
+            "trades": 126,
+            "losses": 71
+          },
+          {
+            "year": "2014",
+            "returnPct": -12.0672344977503,
+            "trades": 112,
+            "losses": 61
+          },
+          {
+            "year": "2015",
+            "returnPct": -24.602084293876636,
+            "trades": 142,
+            "losses": 95
+          },
+          {
+            "year": "2016",
+            "returnPct": -16.60551295006487,
+            "trades": 131,
+            "losses": 82
+          },
+          {
+            "year": "2017",
+            "returnPct": -35.92812204287944,
+            "trades": 126,
+            "losses": 84
+          },
+          {
+            "year": "2018",
+            "returnPct": -23.189014946155183,
+            "trades": 140,
+            "losses": 85
+          },
+          {
+            "year": "2019",
+            "returnPct": -9.875878420454542,
+            "trades": 113,
+            "losses": 68
+          },
+          {
+            "year": "2020",
+            "returnPct": 9.760228093400869,
+            "trades": 123,
+            "losses": 60
+          },
+          {
+            "year": "2021",
+            "returnPct": -19.07892762935307,
+            "trades": 112,
+            "losses": 55
+          },
+          {
+            "year": "2022",
+            "returnPct": -16.888520787783968,
+            "trades": 123,
+            "losses": 68
+          },
+          {
+            "year": "2023",
+            "returnPct": -17.445758484239338,
+            "trades": 126,
+            "losses": 66
+          },
+          {
+            "year": "2024",
+            "returnPct": -17.178396956396902,
+            "trades": 113,
+            "losses": 64
+          },
+          {
+            "year": "2025",
+            "returnPct": -2.1087919552822965,
+            "trades": 130,
+            "losses": 67
+          },
+          {
+            "year": "2026",
+            "returnPct": -40.225122917673275,
+            "trades": 105,
+            "losses": 63
+          }
+        ]
+      },
+      "reversal5": {
+        "rule": {
+          "id": "reversal5",
+          "name": "Weekly relative reversal",
+          "family": "Pair reversal",
+          "lookback": 5,
+          "cadence": 1,
+          "kind": "return",
+          "mode": "pair",
+          "follow": false,
+          "explanation": "Buy the weaker stock over five sessions and short the stronger. Assess daily, hold fixed units until the direction reverses."
+        },
+        "total_return": -72.88623049552541,
+        "cagr": -6.328214950312205,
+        "drawdown": -87.14978956606933,
+        "positions": 1105,
+        "losses": 581,
+        "cash_costs": 19104.936728803,
+        "zero_cost_return": 148.2494461977839,
+        "annual": [
+          {
+            "year": "2006",
+            "returnPct": 5.277898077454202,
+            "trades": 10,
+            "losses": 1
+          },
+          {
+            "year": "2007",
+            "returnPct": -2.416551159177549,
+            "trades": 54,
+            "losses": 22
+          },
+          {
+            "year": "2008",
+            "returnPct": 19.764841907524634,
+            "trades": 64,
+            "losses": 29
+          },
+          {
+            "year": "2009",
+            "returnPct": 21.203976441137186,
+            "trades": 60,
+            "losses": 29
+          },
+          {
+            "year": "2010",
+            "returnPct": -10.408170263314453,
+            "trades": 60,
+            "losses": 31
+          },
+          {
+            "year": "2011",
+            "returnPct": -10.300204996879236,
+            "trades": 51,
+            "losses": 24
+          },
+          {
+            "year": "2012",
+            "returnPct": -5.752629996643099,
+            "trades": 63,
+            "losses": 34
+          },
+          {
+            "year": "2013",
+            "returnPct": 4.774864176400628,
+            "trades": 46,
+            "losses": 20
+          },
+          {
+            "year": "2014",
+            "returnPct": -17.672302395295336,
+            "trades": 56,
+            "losses": 33
+          },
+          {
+            "year": "2015",
+            "returnPct": -3.4504797676487287,
+            "trades": 53,
+            "losses": 26
+          },
+          {
+            "year": "2016",
+            "returnPct": -5.798256241032751,
+            "trades": 57,
+            "losses": 31
+          },
+          {
+            "year": "2017",
+            "returnPct": -10.404994419664382,
+            "trades": 51,
+            "losses": 35
+          },
+          {
+            "year": "2018",
+            "returnPct": -11.026045178878064,
+            "trades": 70,
+            "losses": 46
+          },
+          {
+            "year": "2019",
+            "returnPct": -18.629131768416872,
+            "trades": 42,
+            "losses": 29
+          },
+          {
+            "year": "2020",
+            "returnPct": 10.730512683916826,
+            "trades": 58,
+            "losses": 31
+          },
+          {
+            "year": "2021",
+            "returnPct": -5.890734549896582,
+            "trades": 54,
+            "losses": 26
+          },
+          {
+            "year": "2022",
+            "returnPct": -23.42991797935302,
+            "trades": 47,
+            "losses": 31
+          },
+          {
+            "year": "2023",
+            "returnPct": -16.79865695803091,
+            "trades": 50,
+            "losses": 24
+          },
+          {
+            "year": "2024",
+            "returnPct": -32.60071656718122,
+            "trades": 52,
+            "losses": 29
+          },
+          {
+            "year": "2025",
+            "returnPct": -2.3086277329111837,
+            "trades": 53,
+            "losses": 25
+          },
+          {
+            "year": "2026",
+            "returnPct": 7.912760734621149,
+            "trades": 54,
+            "losses": 25
+          }
+        ]
+      },
+      "reversal20": {
+        "rule": {
+          "id": "reversal20",
+          "name": "Monthly relative reversal",
+          "family": "Pair reversal",
+          "lookback": 20,
+          "cadence": 1,
+          "kind": "return",
+          "mode": "pair",
+          "follow": false,
+          "explanation": "Buy the 20-session relative loser and short the winner. The model expects relative performance to reverse; the prices do not need to become equal."
+        },
+        "total_return": -66.32555037340391,
+        "cagr": -5.30593842710454,
+        "drawdown": -70.96880264093257,
+        "positions": 478,
+        "losses": 235,
+        "cash_costs": 6337.151506971682,
+        "zero_cost_return": -11.92944819358247,
+        "annual": [
+          {
+            "year": "2006",
+            "returnPct": -0.7932940436167879,
+            "trades": 12,
+            "losses": 8
+          },
+          {
+            "year": "2007",
+            "returnPct": -19.578563846032093,
+            "trades": 17,
+            "losses": 10
+          },
+          {
+            "year": "2008",
+            "returnPct": 29.97411156845564,
+            "trades": 42,
+            "losses": 15
+          },
+          {
+            "year": "2009",
+            "returnPct": 3.3458443679631023,
+            "trades": 32,
+            "losses": 17
+          },
+          {
+            "year": "2010",
+            "returnPct": -7.025102974644836,
+            "trades": 24,
+            "losses": 12
+          },
+          {
+            "year": "2011",
+            "returnPct": -24.64924708777052,
+            "trades": 17,
+            "losses": 10
+          },
+          {
+            "year": "2012",
+            "returnPct": -10.009624307219278,
+            "trades": 27,
+            "losses": 13
+          },
+          {
+            "year": "2013",
+            "returnPct": 5.519770257531453,
+            "trades": 18,
+            "losses": 7
+          },
+          {
+            "year": "2014",
+            "returnPct": -10.526817386078624,
+            "trades": 24,
+            "losses": 12
+          },
+          {
+            "year": "2015",
+            "returnPct": -11.169966243193663,
+            "trades": 19,
+            "losses": 9
+          },
+          {
+            "year": "2016",
+            "returnPct": -14.35813848971228,
+            "trades": 26,
+            "losses": 15
+          },
+          {
+            "year": "2017",
+            "returnPct": -10.023258624227838,
+            "trades": 14,
+            "losses": 7
+          },
+          {
+            "year": "2018",
+            "returnPct": 15.56998517899013,
+            "trades": 33,
+            "losses": 13
+          },
+          {
+            "year": "2019",
+            "returnPct": -10.542239538559494,
+            "trades": 11,
+            "losses": 7
+          },
+          {
+            "year": "2020",
+            "returnPct": 3.0913774314298426,
+            "trades": 25,
+            "losses": 12
+          },
+          {
+            "year": "2021",
+            "returnPct": -4.740349503304298,
+            "trades": 17,
+            "losses": 11
+          },
+          {
+            "year": "2022",
+            "returnPct": 7.1098438619796145,
+            "trades": 29,
+            "losses": 13
+          },
+          {
+            "year": "2023",
+            "returnPct": -5.672440155781233,
+            "trades": 17,
+            "losses": 10
+          },
+          {
+            "year": "2024",
+            "returnPct": -12.567352918577857,
+            "trades": 18,
+            "losses": 7
+          },
+          {
+            "year": "2025",
+            "returnPct": 7.110780047717746,
+            "trades": 24,
+            "losses": 8
+          },
+          {
+            "year": "2026",
+            "returnPct": -19.71834809181816,
+            "trades": 32,
+            "losses": 19
+          }
+        ]
+      },
+      "reversal60": {
+        "rule": {
+          "id": "reversal60",
+          "name": "Quarterly relative reversal",
+          "family": "Pair reversal",
+          "lookback": 60,
+          "cadence": 1,
+          "kind": "return",
+          "mode": "pair",
+          "follow": false,
+          "explanation": "Use 60-session relative returns to set equal long and short legs. Review daily and switch when the relative performance gap changes sign."
+        },
+        "total_return": -38.79122448544868,
+        "cagr": -2.42880679684081,
+        "drawdown": -65.12324440658301,
+        "positions": 238,
+        "losses": 104,
+        "cash_costs": 3221.501611009036,
+        "zero_cost_return": -1.03779182259377,
+        "annual": [
+          {
+            "year": "2006",
+            "returnPct": 5.535195570033258,
+            "trades": 8,
+            "losses": 2
+          },
+          {
+            "year": "2007",
+            "returnPct": 5.334004594224595,
+            "trades": 8,
+            "losses": 3
+          },
+          {
+            "year": "2008",
+            "returnPct": -12.92067862281806,
+            "trades": 11,
+            "losses": 6
+          },
+          {
+            "year": "2009",
+            "returnPct": -2.7381230335950746,
+            "trades": 15,
+            "losses": 9
+          },
+          {
+            "year": "2010",
+            "returnPct": -13.593958398999472,
+            "trades": 14,
+            "losses": 5
+          },
+          {
+            "year": "2011",
+            "returnPct": -11.57571890454454,
+            "trades": 4,
+            "losses": 3
+          },
+          {
+            "year": "2012",
+            "returnPct": -20.169448964184657,
+            "trades": 5,
+            "losses": 4
+          },
+          {
+            "year": "2013",
+            "returnPct": 13.410674102263753,
+            "trades": 14,
+            "losses": 5
+          },
+          {
+            "year": "2014",
+            "returnPct": -2.228117861207224,
+            "trades": 10,
+            "losses": 4
+          },
+          {
+            "year": "2015",
+            "returnPct": -13.140658799636274,
+            "trades": 1,
+            "losses": 1
+          },
+          {
+            "year": "2016",
+            "returnPct": -2.6916409074198344,
+            "trades": 6,
+            "losses": 4
+          },
+          {
+            "year": "2017",
+            "returnPct": 5.194746705461273,
+            "trades": 10,
+            "losses": 4
+          },
+          {
+            "year": "2018",
+            "returnPct": -12.745677106631392,
+            "trades": 21,
+            "losses": 13
+          },
+          {
+            "year": "2019",
+            "returnPct": -10.271545103129387,
+            "trades": 7,
+            "losses": 4
+          },
+          {
+            "year": "2020",
+            "returnPct": 2.143004522889713,
+            "trades": 15,
+            "losses": 7
+          },
+          {
+            "year": "2021",
+            "returnPct": 4.747731156219714,
+            "trades": 23,
+            "losses": 10
+          },
+          {
+            "year": "2022",
+            "returnPct": 36.21531194114414,
+            "trades": 29,
+            "losses": 4
+          },
+          {
+            "year": "2023",
+            "returnPct": 1.1239172084241522,
+            "trades": 11,
+            "losses": 4
+          },
+          {
+            "year": "2024",
+            "returnPct": 2.446233121357011,
+            "trades": 8,
+            "losses": 3
+          },
+          {
+            "year": "2025",
+            "returnPct": 10.577351499677356,
+            "trades": 10,
+            "losses": 5
+          },
+          {
+            "year": "2026",
+            "returnPct": -17.28880546459929,
+            "trades": 8,
+            "losses": 4
+          }
+        ]
+      },
+      "ratio20": {
+        "rule": {
+          "id": "ratio20",
+          "name": "Fast ratio convergence",
+          "family": "Pair reversal",
+          "lookback": 20,
+          "cadence": 1,
+          "kind": "ratio",
+          "mode": "pair",
+          "follow": false,
+          "explanation": "Compare the log price ratio with its preceding 20-session average. Buy the relatively low side and short the relatively high side."
+        },
+        "total_return": -18.394643384459798,
+        "cagr": -1.0130285585580046,
+        "drawdown": -52.572285434664835,
+        "positions": 556,
+        "losses": 229,
+        "cash_costs": 11345.167182828709,
+        "zero_cost_return": 148.97512927420507,
+        "annual": [
+          {
+            "year": "2006",
+            "returnPct": -2.5881032336611876,
+            "trades": 10,
+            "losses": 5
+          },
+          {
+            "year": "2007",
+            "returnPct": -12.671177495115327,
+            "trades": 23,
+            "losses": 13
+          },
+          {
+            "year": "2008",
+            "returnPct": 19.8448939863731,
+            "trades": 50,
+            "losses": 16
+          },
+          {
+            "year": "2009",
+            "returnPct": 29.297423482950546,
+            "trades": 46,
+            "losses": 17
+          },
+          {
+            "year": "2010",
+            "returnPct": -7.394712289898731,
+            "trades": 28,
+            "losses": 14
+          },
+          {
+            "year": "2011",
+            "returnPct": -21.70568747497288,
+            "trades": 19,
+            "losses": 9
+          },
+          {
+            "year": "2012",
+            "returnPct": 5.116482727892513,
+            "trades": 29,
+            "losses": 11
+          },
+          {
+            "year": "2013",
+            "returnPct": 9.687880198811861,
+            "trades": 24,
+            "losses": 8
+          },
+          {
+            "year": "2014",
+            "returnPct": -6.245520522294146,
+            "trades": 32,
+            "losses": 16
+          },
+          {
+            "year": "2015",
+            "returnPct": -6.905951631610153,
+            "trades": 25,
+            "losses": 9
+          },
+          {
+            "year": "2016",
+            "returnPct": -2.4295826345755667,
+            "trades": 24,
+            "losses": 13
+          },
+          {
+            "year": "2017",
+            "returnPct": -12.044174631066118,
+            "trades": 24,
+            "losses": 14
+          },
+          {
+            "year": "2018",
+            "returnPct": 12.301058721447111,
+            "trades": 23,
+            "losses": 10
+          },
+          {
+            "year": "2019",
+            "returnPct": -11.390465433979259,
+            "trades": 13,
+            "losses": 5
+          },
+          {
+            "year": "2020",
+            "returnPct": 10.73163529717569,
+            "trades": 33,
+            "losses": 16
+          },
+          {
+            "year": "2021",
+            "returnPct": 11.30145844510395,
+            "trades": 31,
+            "losses": 10
+          },
+          {
+            "year": "2022",
+            "returnPct": 11.501379129026311,
+            "trades": 27,
+            "losses": 8
+          },
+          {
+            "year": "2023",
+            "returnPct": -2.7002536537127253,
+            "trades": 25,
+            "losses": 9
+          },
+          {
+            "year": "2024",
+            "returnPct": -21.765518063536714,
+            "trades": 22,
+            "losses": 12
+          },
+          {
+            "year": "2025",
+            "returnPct": -10.045165265387645,
+            "trades": 22,
+            "losses": 7
+          },
+          {
+            "year": "2026",
+            "returnPct": 5.583470717295125,
+            "trades": 26,
+            "losses": 7
+          }
+        ]
+      },
+      "ratio252": {
+        "rule": {
+          "id": "ratio252",
+          "name": "Annual ratio convergence",
+          "family": "Pair reversal",
+          "lookback": 252,
+          "cadence": 1,
+          "kind": "ratio",
+          "mode": "pair",
+          "follow": false,
+          "explanation": "Trade the deviation of the log price ratio from its prior 252-session mean. Assess daily, without a cointegration gate."
+        },
+        "total_return": -37.301023568156,
+        "cagr": -2.3111744432040338,
+        "drawdown": -65.71469078307037,
+        "positions": 138,
+        "losses": 46,
+        "cash_costs": 3042.780673114893,
+        "zero_cost_return": -16.933783284906966,
+        "annual": [
+          {
+            "year": "2006",
+            "returnPct": 7.283116788836441,
+            "trades": 4,
+            "losses": 1
+          },
+          {
+            "year": "2007",
+            "returnPct": 2.7294175668974408,
+            "trades": 16,
+            "losses": 8
+          },
+          {
+            "year": "2008",
+            "returnPct": -2.5537850278876006,
+            "trades": 9,
+            "losses": 4
+          },
+          {
+            "year": "2009",
+            "returnPct": 18.43741901348148,
+            "trades": 11,
+            "losses": 2
+          },
+          {
+            "year": "2010",
+            "returnPct": -9.311375234160291,
+            "trades": 5,
+            "losses": 1
+          },
+          {
+            "year": "2011",
+            "returnPct": -3.563018974391774,
+            "trades": 7,
+            "losses": 2
+          },
+          {
+            "year": "2012",
+            "returnPct": -6.766698612855826,
+            "trades": 3,
+            "losses": 0
+          },
+          {
+            "year": "2013",
+            "returnPct": 6.261377395555612,
+            "trades": 1,
+            "losses": 1
+          },
+          {
+            "year": "2014",
+            "returnPct": 6.351035576284114,
+            "trades": 19,
+            "losses": 8
+          },
+          {
+            "year": "2015",
+            "returnPct": -2.08247634795774,
+            "trades": 5,
+            "losses": 1
+          },
+          {
+            "year": "2016",
+            "returnPct": 7.597529923314528,
+            "trades": 8,
+            "losses": 3
+          },
+          {
+            "year": "2017",
+            "returnPct": 4.858840873756365,
+            "trades": 6,
+            "losses": 1
+          },
+          {
+            "year": "2018",
+            "returnPct": -14.54143138220456,
+            "trades": 0,
+            "losses": 0
+          },
+          {
+            "year": "2019",
+            "returnPct": -14.53148961040337,
+            "trades": 6,
+            "losses": 4
+          },
+          {
+            "year": "2020",
+            "returnPct": -18.16633478798053,
+            "trades": 1,
+            "losses": 0
+          },
+          {
+            "year": "2021",
+            "returnPct": 6.925923951676727,
+            "trades": 11,
+            "losses": 4
+          },
+          {
+            "year": "2022",
+            "returnPct": -2.5009888141121372,
+            "trades": 7,
+            "losses": 2
+          },
+          {
+            "year": "2023",
+            "returnPct": -10.302811150633651,
+            "trades": 3,
+            "losses": 1
+          },
+          {
+            "year": "2024",
+            "returnPct": 0.03843381207073726,
+            "trades": 5,
+            "losses": 1
+          },
+          {
+            "year": "2025",
+            "returnPct": 13.49312076485214,
+            "trades": 5,
+            "losses": 1
+          },
+          {
+            "year": "2026",
+            "returnPct": -23.698042651201924,
+            "trades": 6,
+            "losses": 1
+          }
+        ]
+      },
+      "pairtrend60": {
+        "rule": {
+          "id": "pairtrend60",
+          "name": "Relative trend control",
+          "family": "Pair trend",
+          "lookback": 60,
+          "cadence": 1,
+          "kind": "return",
+          "mode": "pair",
+          "follow": true,
+          "explanation": "A control that buys the 60-session relative winner and shorts the loser. It tests persistence rather than convergence."
+        },
+        "total_return": -55.04515042213214,
+        "cagr": -3.9255803156514557,
+        "drawdown": -72.51618559416745,
+        "positions": 238,
+        "losses": 164,
+        "cash_costs": 4145.873872205201,
+        "zero_cost_return": -27.30007740851437,
+        "annual": [
+          {
+            "year": "2006",
+            "returnPct": -8.22803734405505,
+            "trades": 8,
+            "losses": 7
+          },
+          {
+            "year": "2007",
+            "returnPct": -8.52793848734299,
+            "trades": 8,
+            "losses": 5
+          },
+          {
+            "year": "2008",
+            "returnPct": 7.292047483249875,
+            "trades": 11,
+            "losses": 5
+          },
+          {
+            "year": "2009",
+            "returnPct": -4.305877002916336,
+            "trades": 15,
+            "losses": 9
+          },
+          {
+            "year": "2010",
+            "returnPct": 6.4022917564336534,
+            "trades": 14,
+            "losses": 13
+          },
+          {
+            "year": "2011",
+            "returnPct": 10.495920437878548,
+            "trades": 4,
+            "losses": 1
+          },
+          {
+            "year": "2012",
+            "returnPct": 19.04874500915188,
+            "trades": 5,
+            "losses": 2
+          },
+          {
+            "year": "2013",
+            "returnPct": -16.243542924878874,
+            "trades": 14,
+            "losses": 10
+          },
+          {
+            "year": "2014",
+            "returnPct": -2.8070188151887443,
+            "trades": 10,
+            "losses": 7
+          },
+          {
+            "year": "2015",
+            "returnPct": 11.74205365847445,
+            "trades": 1,
+            "losses": 0
+          },
+          {
+            "year": "2016",
+            "returnPct": 0.592466412619097,
+            "trades": 6,
+            "losses": 3
+          },
+          {
+            "year": "2017",
+            "returnPct": -9.732092323579899,
+            "trades": 10,
+            "losses": 9
+          },
+          {
+            "year": "2018",
+            "returnPct": 3.0084868916166796,
+            "trades": 21,
+            "losses": 12
+          },
+          {
+            "year": "2019",
+            "returnPct": 7.317094065102991,
+            "trades": 7,
+            "losses": 4
+          },
+          {
+            "year": "2020",
+            "returnPct": -9.608716096253078,
+            "trades": 15,
+            "losses": 11
+          },
+          {
+            "year": "2021",
+            "returnPct": -13.805155086101683,
+            "trades": 23,
+            "losses": 16
+          },
+          {
+            "year": "2022",
+            "returnPct": -35.74268848181988,
+            "trades": 29,
+            "losses": 26
+          },
+          {
+            "year": "2023",
+            "returnPct": -7.050481397950826,
+            "trades": 11,
+            "losses": 8
+          },
+          {
+            "year": "2024",
+            "returnPct": -6.168801425117465,
+            "trades": 8,
+            "losses": 6
+          },
+          {
+            "year": "2025",
+            "returnPct": -15.57471067892081,
+            "trades": 10,
+            "losses": 5
+          },
+          {
+            "year": "2026",
+            "returnPct": 10.712142272306057,
+            "trades": 8,
+            "losses": 5
+          }
+        ]
+      },
+      "rotation5": {
+        "rule": {
+          "id": "rotation5",
+          "name": "Weekly loser rotation",
+          "family": "Stock rotation",
+          "lookback": 5,
+          "cadence": 5,
+          "kind": "return",
+          "mode": "long",
+          "follow": false,
+          "explanation": "Every five sessions, invest in the weaker stock over the previous five sessions. Hold one stock, with no short leg. This carries stock-market exposure."
+        },
+        "total_return": 505.9410166630853,
+        "cagr": 9.443885329649504,
+        "drawdown": -58.653142107295174,
+        "positions": 505,
+        "losses": 212,
+        "cash_costs": 31032.038183921904,
+        "zero_cost_return": 1561.8151789263713,
+        "annual": [
+          {
+            "year": "2006",
+            "returnPct": -3.9408594928009966,
+            "trades": 7,
+            "losses": 2
+          },
+          {
+            "year": "2007",
+            "returnPct": 19.987906258362244,
+            "trades": 25,
+            "losses": 9
+          },
+          {
+            "year": "2008",
+            "returnPct": -34.578528282377206,
+            "trades": 28,
+            "losses": 16
+          },
+          {
+            "year": "2009",
+            "returnPct": 62.1244543019426,
+            "trades": 31,
+            "losses": 12
+          },
+          {
+            "year": "2010",
+            "returnPct": 5.139514508931153,
+            "trades": 27,
+            "losses": 11
+          },
+          {
+            "year": "2011",
+            "returnPct": -34.151979493606134,
+            "trades": 21,
+            "losses": 11
+          },
+          {
+            "year": "2012",
+            "returnPct": 21.98375109622368,
+            "trades": 28,
+            "losses": 9
+          },
+          {
+            "year": "2013",
+            "returnPct": 42.065644879440335,
+            "trades": 29,
+            "losses": 10
+          },
+          {
+            "year": "2014",
+            "returnPct": 3.58168235053129,
+            "trades": 24,
+            "losses": 11
+          },
+          {
+            "year": "2015",
+            "returnPct": 4.864882560962958,
+            "trades": 25,
+            "losses": 12
+          },
+          {
+            "year": "2016",
+            "returnPct": 3.9831039192325557,
+            "trades": 22,
+            "losses": 8
+          },
+          {
+            "year": "2017",
+            "returnPct": 29.976622155558807,
+            "trades": 24,
+            "losses": 7
+          },
+          {
+            "year": "2018",
+            "returnPct": 23.150090534814318,
+            "trades": 24,
+            "losses": 13
+          },
+          {
+            "year": "2019",
+            "returnPct": 39.52512495874403,
+            "trades": 26,
+            "losses": 6
+          },
+          {
+            "year": "2020",
+            "returnPct": 17.92362206684861,
+            "trades": 24,
+            "losses": 8
+          },
+          {
+            "year": "2021",
+            "returnPct": 36.66095333909316,
+            "trades": 24,
+            "losses": 11
+          },
+          {
+            "year": "2022",
+            "returnPct": -16.961745332883748,
+            "trades": 25,
+            "losses": 15
+          },
+          {
+            "year": "2023",
+            "returnPct": 41.817857881891385,
+            "trades": 26,
+            "losses": 11
+          },
+          {
+            "year": "2024",
+            "returnPct": 0.4575971423244951,
+            "trades": 20,
+            "losses": 11
+          },
+          {
+            "year": "2025",
+            "returnPct": 34.49422434618554,
+            "trades": 26,
+            "losses": 10
+          },
+          {
+            "year": "2026",
+            "returnPct": -36.127108712125654,
+            "trades": 19,
+            "losses": 9
+          }
+        ]
+      },
+      "rotation20": {
+        "rule": {
+          "id": "rotation20",
+          "name": "Monthly loser rotation",
+          "family": "Stock rotation",
+          "lookback": 20,
+          "cadence": 20,
+          "kind": "return",
+          "mode": "long",
+          "follow": false,
+          "explanation": "Every 20 sessions, buy the weaker performer over the previous 20 sessions. Keep holding it until a later review selects the other company. No short leg."
+        },
+        "total_return": 1144.1490675617242,
+        "cagr": 13.459679454286832,
+        "drawdown": -44.02125333449939,
+        "positions": 126,
+        "losses": 52,
+        "cash_costs": 8813.13627028449,
+        "zero_cost_return": 1497.4792013746235,
+        "annual": [
+          {
+            "year": "2006",
+            "returnPct": -8.076260142406777,
+            "trades": 2,
+            "losses": 1
+          },
+          {
+            "year": "2007",
+            "returnPct": 37.217220796098395,
+            "trades": 7,
+            "losses": 2
+          },
+          {
+            "year": "2008",
+            "returnPct": -22.36910346429695,
+            "trades": 9,
+            "losses": 5
+          },
+          {
+            "year": "2009",
+            "returnPct": 40.93389118719388,
+            "trades": 9,
+            "losses": 2
+          },
+          {
+            "year": "2010",
+            "returnPct": -1.780556829907598,
+            "trades": 3,
+            "losses": 1
+          },
+          {
+            "year": "2011",
+            "returnPct": -34.075424508126105,
+            "trades": 4,
+            "losses": 4
+          },
+          {
+            "year": "2012",
+            "returnPct": 4.908656073067252,
+            "trades": 5,
+            "losses": 3
+          },
+          {
+            "year": "2013",
+            "returnPct": 3.2071579325428257,
+            "trades": 3,
+            "losses": 2
+          },
+          {
+            "year": "2014",
+            "returnPct": 10.389458202885592,
+            "trades": 7,
+            "losses": 1
+          },
+          {
+            "year": "2015",
+            "returnPct": -3.240770374970803,
+            "trades": 7,
+            "losses": 4
+          },
+          {
+            "year": "2016",
+            "returnPct": 7.199042912442444,
+            "trades": 4,
+            "losses": 1
+          },
+          {
+            "year": "2017",
+            "returnPct": 33.71565029633705,
+            "trades": 6,
+            "losses": 0
+          },
+          {
+            "year": "2018",
+            "returnPct": -1.0712267920894636,
+            "trades": 6,
+            "losses": 4
+          },
+          {
+            "year": "2019",
+            "returnPct": 30.334881942303227,
+            "trades": 6,
+            "losses": 3
+          },
+          {
+            "year": "2020",
+            "returnPct": 41.76367155089524,
+            "trades": 7,
+            "losses": 0
+          },
+          {
+            "year": "2021",
+            "returnPct": 116.7851300146951,
+            "trades": 10,
+            "losses": 2
+          },
+          {
+            "year": "2022",
+            "returnPct": 6.4229218251835585,
+            "trades": 9,
+            "losses": 5
+          },
+          {
+            "year": "2023",
+            "returnPct": 25.024118710374864,
+            "trades": 6,
+            "losses": 2
+          },
+          {
+            "year": "2024",
+            "returnPct": 11.61676420725093,
+            "trades": 4,
+            "losses": 2
+          },
+          {
+            "year": "2025",
+            "returnPct": 65.51217850895013,
+            "trades": 6,
+            "losses": 3
+          },
+          {
+            "year": "2026",
+            "returnPct": -13.76950602890128,
+            "trades": 6,
+            "losses": 5
+          }
+        ]
+      },
+      "trend60": {
+        "rule": {
+          "id": "trend60",
+          "name": "Monthly trend rotation",
+          "family": "Stock rotation",
+          "lookback": 60,
+          "cadence": 20,
+          "kind": "return",
+          "mode": "long",
+          "follow": true,
+          "explanation": "Every 20 sessions, hold the stronger stock over the previous 60 sessions. A long-only trend control with market exposure."
+        },
+        "total_return": 1002.0185267898124,
+        "cagr": 12.77235864296713,
+        "drawdown": -60.23407107909103,
+        "positions": 66,
+        "losses": 34,
+        "cash_costs": 5645.424762477447,
+        "zero_cost_return": 1155.4893620196688,
+        "annual": [
+          {
+            "year": "2006",
+            "returnPct": -8.097857573055157,
+            "trades": 1,
+            "losses": 1
+          },
+          {
+            "year": "2007",
+            "returnPct": 13.922915095550458,
+            "trades": 3,
+            "losses": 2
+          },
+          {
+            "year": "2008",
+            "returnPct": -29.291190871271134,
+            "trades": 5,
+            "losses": 4
+          },
+          {
+            "year": "2009",
+            "returnPct": 57.18549582868131,
+            "trades": 1,
+            "losses": 0
+          },
+          {
+            "year": "2010",
+            "returnPct": 15.222394283884544,
+            "trades": 3,
+            "losses": 2
+          },
+          {
+            "year": "2011",
+            "returnPct": -26.32549606160507,
+            "trades": 4,
+            "losses": 4
+          },
+          {
+            "year": "2012",
+            "returnPct": 38.1048748866728,
+            "trades": 2,
+            "losses": 0
+          },
+          {
+            "year": "2013",
+            "returnPct": 19.852769330014386,
+            "trades": 3,
+            "losses": 0
+          },
+          {
+            "year": "2014",
+            "returnPct": 15.508379674409834,
+            "trades": 5,
+            "losses": 2
+          },
+          {
+            "year": "2015",
+            "returnPct": 16.963721169127787,
+            "trades": 1,
+            "losses": 0
+          },
+          {
+            "year": "2016",
+            "returnPct": 14.711783865746565,
+            "trades": 2,
+            "losses": 0
+          },
+          {
+            "year": "2017",
+            "returnPct": 16.190992193704457,
+            "trades": 4,
+            "losses": 2
+          },
+          {
+            "year": "2018",
+            "returnPct": 12.029172490548468,
+            "trades": 4,
+            "losses": 4
+          },
+          {
+            "year": "2019",
+            "returnPct": 49.93290040265137,
+            "trades": 2,
+            "losses": 0
+          },
+          {
+            "year": "2020",
+            "returnPct": 36.15762490661159,
+            "trades": 3,
+            "losses": 2
+          },
+          {
+            "year": "2021",
+            "returnPct": 23.971256617905844,
+            "trades": 4,
+            "losses": 2
+          },
+          {
+            "year": "2022",
+            "returnPct": -37.26257416317809,
+            "trades": 8,
+            "losses": 5
+          },
+          {
+            "year": "2023",
+            "returnPct": 43.36014425956654,
+            "trades": 3,
+            "losses": 1
+          },
+          {
+            "year": "2024",
+            "returnPct": 42.802168938942465,
+            "trades": 4,
+            "losses": 1
+          },
+          {
+            "year": "2025",
+            "returnPct": 17.753749633353898,
+            "trades": 2,
+            "losses": 1
+          },
+          {
+            "year": "2026",
+            "returnPct": -12.712088262788502,
+            "trades": 2,
+            "losses": 1
+          }
+        ]
+      }
+    }
+  },
+  "benchmarks": {
+    "KO-PEP": {
+      "return_pct": 482.8513761532365
+    },
+    "MSFT-ORCL": {
+      "return_pct": 1660.9396527562449
+    }
+  }
+}

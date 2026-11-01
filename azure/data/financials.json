@@ -1,0 +1,73 @@
+{
+  "as_of": "2024-12-23",
+  "companies": {
+    "KO": {
+      "name": "Coca Cola Co",
+      "symbol": "KO",
+      "cik": "0000021344",
+      "period_start": "2023-01-01",
+      "period_end": "2023-12-31",
+      "prior_period_end": "2022-12-31",
+      "filed": "2024-02-20",
+      "accession": "0000021344-24-000009",
+      "filing_url": "https://www.sec.gov/Archives/edgar/data/21344/000002134424000009/",
+      "revenue_tag": "Revenues",
+      "revenue": 45754000000,
+      "prior_revenue": 43004000000,
+      "operating_income": 11311000000,
+      "growth": 0.06394753976374301,
+      "operating_margin": 0.24721335839489444
+    },
+    "PEP": {
+      "name": "Pepsico Inc",
+      "symbol": "PEP",
+      "cik": "0000077476",
+      "period_start": "2023-01-01",
+      "period_end": "2023-12-30",
+      "prior_period_end": "2022-12-31",
+      "filed": "2024-02-09",
+      "accession": "0000077476-24-000008",
+      "filing_url": "https://www.sec.gov/Archives/edgar/data/77476/000007747624000008/",
+      "revenue_tag": "Revenues",
+      "revenue": 91471000000,
+      "prior_revenue": 86392000000,
+      "operating_income": 11986000000,
+      "growth": 0.05879016575608853,
+      "operating_margin": 0.1310360660755868
+    },
+    "MSFT": {
+      "name": "Microsoft Corporation",
+      "symbol": "MSFT",
+      "cik": "0000789019",
+      "period_start": "2023-07-01",
+      "period_end": "2024-06-30",
+      "prior_period_end": "2023-06-30",
+      "filed": "2024-07-30",
+      "accession": "0000950170-24-087843",
+      "filing_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017024087843/",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "revenue": 245122000000,
+      "prior_revenue": 211915000000,
+      "operating_income": 109433000000,
+      "growth": 0.1566996201307127,
+      "operating_margin": 0.44644299573273716
+    },
+    "ORCL": {
+      "name": "Oracle Corporation",
+      "symbol": "ORCL",
+      "cik": "0001341439",
+      "period_start": "2023-06-01",
+      "period_end": "2024-05-31",
+      "prior_period_end": "2023-05-31",
+      "filed": "2024-06-20",
+      "accession": "0000950170-24-075605",
+      "filing_url": "https://www.sec.gov/Archives/edgar/data/1341439/000095017024075605/",
+      "revenue_tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "revenue": 52961000000,
+      "prior_revenue": 49954000000,
+      "operating_income": 15353000000,
+      "growth": 0.060195379749369504,
+      "operating_margin": 0.2898925624516153
+    }
+  }
+}

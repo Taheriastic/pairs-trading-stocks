@@ -1,0 +1,144 @@
+export type Company = {
+  name: string;
+  symbol: string;
+  period_start: string;
+  period_end: string;
+  prior_period_end: string;
+  filed: string;
+  filing_url: string;
+  revenue_tag: string;
+  revenue: number;
+  prior_revenue: number;
+  operating_income: number;
+  growth: number;
+  operating_margin: number;
+};
+export type Financials = { as_of: string; companies: Record<string, Company> };
+export type Signal = {
+  date: string;
+  y_price: number;
+  x_price: number;
+  alpha: number;
+  beta: number;
+  spread: number;
+  mean: number;
+  std: number;
+  z: number;
+  pvalue: number;
+  eligible: boolean;
+  direction: number;
+  target_y_if_x_constant: number | null;
+  stop_y_if_x_constant: number | null;
+  action: string;
+};
+export type Trade = {
+  signal_date: string;
+  entry_date: string;
+  exit_date: string;
+  direction: number;
+  entry_y: number;
+  entry_x: number;
+  exit_y: number;
+  exit_x: number;
+  holding_days: number;
+  reason: string;
+  pnl: number;
+  return_pct: number;
+};
+export type CurvePoint = { date: string; equity: number };
+export type PairPrice = { date: string; y_price: number; x_price: number };
+export type Performance = {
+  curve: CurvePoint[];
+  trades: Trade[];
+  total_return_pct: number;
+  max_drawdown_pct: number;
+  trade_count: number;
+  loss_count: number;
+  cash_days: number;
+  active_days: number;
+};
+export type Analysis = {
+  pair: string;
+  symbols: string[];
+  start_date: string;
+  end_date: string;
+  model: {
+    formation_days: number;
+    spread_days: number;
+    entry_z: number;
+    exit_z: number;
+    stop_z: number;
+    max_hold_days: number;
+    capital: number;
+    cost_bps_per_leg_per_side: number;
+    cointegration_p_max: number;
+  };
+  signals: Signal[];
+  prices: PairPrice[];
+  strategy: Performance;
+  inverse: Performance;
+  benchmark: CurvePoint[];
+};
+export type Scenario = {
+  symbol: string;
+  growth: number;
+  margin: number;
+  reported_revenue: number;
+  base_growth: number;
+  base_margin: number;
+  base_revenue: number;
+  base_operating_income: number;
+  scenario_revenue: number;
+  scenario_operating_income: number;
+  growth_effect: number;
+  margin_effect: number;
+  total_change: number;
+  filing_url: string;
+  period_end: string;
+};
+
+export type StudyMetrics = {
+  return_pct: number;
+  cagr_pct: number;
+  drawdown_pct: number;
+  trades: number;
+  losses: number;
+  score: number | null;
+};
+export type StudyCandidate = {
+  config: {
+    family: string;
+    lookback: number;
+    entry_percentile: number;
+    exit_percentile: number;
+    max_hold: number;
+    min_correlation: number | null;
+  };
+  development: StudyMetrics;
+  validation: StudyMetrics;
+  holdout: StudyMetrics;
+  full: StudyMetrics;
+};
+export type StrategyStudyData = {
+  audit: { common_rows: number; start_date: string; end_date: string };
+  splits: {
+    development_end: string;
+    validation_end: string;
+    holdout_start: string;
+  };
+  pairs: Record<
+    string,
+    {
+      tested_candidates: number;
+      developed_candidates: number;
+      qualified_candidates: number;
+      selected: StudyCandidate | null;
+      hindsight: StudyCandidate;
+      family_hindsight: Record<string, StudyCandidate>;
+      most_active: StudyCandidate;
+      cointegration_baseline: Record<string, StudyMetrics>;
+      equal_weight_benchmark: Record<string, StudyMetrics>;
+      holdout_pass: boolean;
+    }
+  >;
+};

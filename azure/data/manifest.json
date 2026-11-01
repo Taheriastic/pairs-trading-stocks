@@ -1,0 +1,28 @@
+{
+  "as_of": "2024-12-23",
+  "price_end": "2024-12-20",
+  "price_source": "https://www.kaggle.com/api/v1/datasets/view/andrewmvd/sp-500-stocks",
+  "price_download": "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/sp-500-stocks",
+  "price_license": "CC0: Public Domain",
+  "price_archive_sha256": "0c50fb48ef5b4a6c0f722e3dfe667c78077185517030f36839aaed3bae9a2d79",
+  "ko_source": "https://www.kaggle.com/api/v1/datasets/view/isaaclopgu/coca-cola-stock-daily-updated",
+  "ko_download": "https://www.kaggle.com/api/v1/datasets/download/isaaclopgu/coca-cola-stock-daily-updated",
+  "ko_license": "CC0: Public Domain",
+  "ko_archive_sha256": "e1c209365c3d71c825019ed2c35df05aa72cfe5cca187372cac28c3151485ae5",
+  "ko_note": "Main S&P 500 archive has no KO prices. KO Close from separate CC0 archive is used as an adjusted-like research price; raw nominal close is unavailable there.",
+  "price_rows": 8024,
+  "price_symbols": {
+    "KO": 2006,
+    "PEP": 2006,
+    "MSFT": 2006,
+    "ORCL": 2006
+  },
+  "price_fields": [
+    "Date",
+    "Symbol",
+    "Adj Close",
+    "Close"
+  ],
+  "financial_source": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+  "financial_policy": "Earliest filed 10-K fact for latest annual period available by cutoff; fiscal periods may differ."
+}
